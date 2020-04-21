@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  TopGLSDKDemo
+
+  Created by 杨飞飞 on 2020/4/20.
+  Copyright © 2020 杨飞飞. All rights reserved.
+*/
+
+CFBundleDisplayName = "极联SDK";
+
+NSLocationWhenInUseUsageDescription = "App需要您的同意访问定位，来获取天气信息/Wi-Fi信息";
