@@ -1,0 +1,12 @@
+/*
+ InfoPlist.strings
+ Top
+ 
+ Created by Lieshutong on 15/10/25.
+ Copyright © 2015年 Geeklink. All rights reserved.
+ */
+
+CFBundleDisplayName = "极联SDK";
+
+NSLocationWhenInUseUsageDescription = "We need your permission to access the location, to get weather information/Wi-Fi SSID.";
+

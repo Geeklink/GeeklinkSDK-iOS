@@ -1,0 +1,109 @@
+/* 
+  RoomDevice.strings
+  Top
+
+  Created by Lieshutong on 2018/5/17.
+  Copyright © 2018年 Geeklink. All rights reserved.
+*/
+
+
+//按键管理，RC Key Manage
+"Add New Key" = "添加遥控按键";
+"Eidt Key" = "编辑遥控按键";
+
+"New Key" = "新按键";
+"Key Name" = "按键名称";
+"Key Icon" = "按键图标";
+"Delete this key" = "删除这个按键";
+
+"Record entity RC button" = "录制实体遥控按钮";
+"Please aim the entity RC to the host, and press the button that need to add." = "请将实体遥控器对准主机，然后按下需要学习的按键。";
+"Create new code" = "创建新遥控码";
+
+"RF315M" = "射频315M";
+"RF433M" = "射频433M";
+"Livo Switch" = "力沃开关(Livo)";
+
+//快捷键，Quick Key
+"RC Quick Key" = "遥控快捷键";
+"Add RC Quick Key" = "添加遥控快捷键";
+"RC Quick Key List" = "遥控快捷键列表";
+"RC Quick Key: RC keys that can be quick controlled in the room main page." = "遥控快捷键：可以在房间首页进行快速控制的遥控按键";
+
+
+//设备详情界面，Device Detail View
+"View Device" = "查看设备";
+"Device Name" = "设备名称";
+"Device Room" = "设备房间";
+"Device Type" = "设备类型";
+
+//摄像头，Camera
+"TUTK Camera" = "TUTK摄像头";
+"EZVIZ Camera" = "萤石摄像头";
+"LeChange Camera" = "乐橙摄像头";
+"S/N" = "序列号";
+"Parameters Setting" = "配置参数";
+
+//在线，Online
+"Online State" = "在线状态";
+"LAN Connect" = "局域网连接";
+"Cloud Connect" = "云端连接";
+"Online" = "在线";
+"Offline" = "离线";
+
+//设置，Geeklink
+"Firmware Version" = "固件版本";
+"MAC Address" = "MAC地址";
+"IP Address" = "IP地址";
+
+//分机，Slave
+"Device State" = "设备状态";
+"Open" = "打开";
+"Close" = "关闭";
+"Somebody" = "有人";
+"Nobody" = "没人";
+"Locked Up" = "锁上";
+"Not Locked" = "没锁上";
+"Road Note" = "分路备注"; 
+"Host's time" = "主机时间";
+"Push Language" = "推送语言";
+"Loading" = "加载中";
+"No configuration" = "没配置";
+"All on" = "全部打开";
+"All off" = "全部关闭";
+"All host's feedback switch turn on" = "主机下所有反馈开关打开";
+"All host's feedback switch turn off" = "主机下所有反馈开关关闭";
+"Control one feedback switch" = "控制一个反馈开关";
+"Configure the doorbell" = "配置门铃";
+"Select" = "选择";
+"For security" = "用于安防";
+//遥控，RC
+"Owner Host" = "所属主机";
+"Send Code Device" = "发码控制设备";
+"IR Carrier" = "红外码载波";
+//声光报警
+
+"Doorbell sound" = "门铃音";
+"Alarm sound" = "报警音";
+
+"ALARM_SOUND_1" = "消防警报声";
+"ALARM_SOUND_2" = "警车鸣笛声";
+"ALARM_SOUND_3" = "报警声1";
+"ALARM_SOUND_4" = "报警声2";
+"ALARM_SOUND_5" = "犬吠声";
+
+"DOOR_SOUND_1" = "叮咚门铃";
+"DOOR_SOUND_2" = "天空之城";
+"DOOR_SOUND_3" = "致爱丽丝";
+"DOOR_SOUND_4" = "卡农";
+"DOOR_SOUND_5" = "马林巴琴";
+"DOOR_SOUND_6" = "消息音效";
+"DOOR_SOUND_7" = "哆啦A梦";
+"DOOR_SOUND_8" = "酒杯加冰音效";
+"DOOR_SOUND_9" = "短信音效";
+
+
+//删除，Delate
+"Delete this device" = "删除这个设备";
+"Note: if the host is deleted, the peripheral device of the host will also be deleted." = "注意：如果主机被删除，主机的从属分机设备也将被删除。";
+"You can't delete devices when connecting host to the cloud, please delete them when connecting host to LAN." = "云端连接主机时无法删除设备，请在局域网连接主机时进行删除";

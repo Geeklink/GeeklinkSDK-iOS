@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TopGLSDKDemo
+
+  Created by 杨飞飞 on 2020/4/23.
+  Copyright © 2020 杨飞飞. All rights reserved.
+*/
+"TV" = "码库电视";
+"STB" = "码库机顶盒";
+"IPTV" = "码库IPTV";
+"AC" = "码库空调";
+"Custom" = "自定义学习遥控器";
+"Click To Send" = "点击发送";

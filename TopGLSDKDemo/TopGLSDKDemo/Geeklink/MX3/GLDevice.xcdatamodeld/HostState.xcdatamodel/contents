@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Custom_RC_Key" representedClassName="Custom_RC_Key" syncable="YES" codeGenerationType="class">
+        <attribute name="a_key_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_key_picture_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_key_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="d_key_study_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="e_key_order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="GL_Dev_Gas" representedClassName="GL_Dev_Gas" syncable="YES" codeGenerationType="class">
+        <attribute name="a_battery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_gas_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_smoke_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="GL_Dev_Local_Host" representedClassName="GL_Dev_Local_Host" syncable="YES" codeGenerationType="class"/>
+    <entity name="GL_Dev_Plug" representedClassName="GL_Dev_Plug" syncable="YES" codeGenerationType="class">
+        <relationship name="road_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plug_Road" syncable="YES"/>
+    </entity>
+    <entity name="GL_Dev_PM25" representedClassName="GL_Dev_PM25" syncable="YES" codeGenerationType="class">
+        <attribute name="a_battery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_pm25_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_pm01_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="d_pm10_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="GL_Dev_Thinker" representedClassName="GL_Dev_Thinker" syncable="YES" codeGenerationType="class">
+        <attribute name="a_temperature" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="d_humidity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="sub_dev_list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sub_Dev_Base" syncable="YES"/>
+    </entity>
+    <entity name="GL_Device_Base" representedClassName="GL_Device_Base" syncable="YES" codeGenerationType="class">
+        <attribute name="a_device_md5" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="b_device_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_device_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="d_firmware_version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GL_Dev_Gas" syncable="YES"/>
+        <relationship name="local_host" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GL_Dev_Local_Host" syncable="YES"/>
+        <relationship name="plug" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GL_Dev_Plug" syncable="YES"/>
+        <relationship name="pm25" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GL_Dev_PM25" syncable="YES"/>
+        <relationship name="thinker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GL_Dev_Thinker" syncable="YES"/>
+    </entity>
+    <entity name="Macro_Borad_Road_Set" representedClassName="Macro_Borad_Road_Set" syncable="YES" codeGenerationType="class">
+        <attribute name="a_road" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_setting" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Plug_Road" representedClassName="Plug_Road" syncable="YES" codeGenerationType="class">
+        <attribute name="a_road" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_on_off" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Curtain" representedClassName="Slave_Curtain" syncable="YES" codeGenerationType="class">
+        <attribute name="a_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Door_Lock" representedClassName="Slave_Door_Lock" syncable="YES" codeGenerationType="class">
+        <attribute name="a_battery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Door_Sensor" representedClassName="Slave_Door_Sensor" syncable="YES" codeGenerationType="class">
+        <attribute name="a_battery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Slave_IR_Sensor" representedClassName="Slave_IR_Sensor" syncable="YES" codeGenerationType="class">
+        <attribute name="a_battery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Macro_Borad" representedClassName="Slave_Macro_Borad" syncable="YES" codeGenerationType="class">
+        <attribute name="a_battery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="road_set_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Macro_Borad_Road_Set" syncable="YES"/>
+        <relationship name="safe_rc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Safe_RC" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Relay" representedClassName="Slave_Relay" syncable="YES" codeGenerationType="class">
+        <attribute name="a_battery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_temperature" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_humidity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Safe_RC" representedClassName="Slave_Safe_RC" syncable="YES" codeGenerationType="class">
+        <attribute name="a_macro_borad_on_off" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Siren" representedClassName="Slave_Siren" syncable="YES" codeGenerationType="class">
+        <attribute name="a_alarm_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_alarm_volume" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_doorbell_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="d_doorbell_volume" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Slave_Swith" representedClassName="Slave_Swith" syncable="YES" codeGenerationType="class">
+        <relationship name="road_note_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Switch_Note" syncable="YES"/>
+    </entity>
+    <entity name="Sub_Dev_Base" representedClassName="Sub_Dev_Base" syncable="YES" codeGenerationType="class">
+        <attribute name="a_sub_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_sub_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_sub_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="custom_ir" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sub_Dev_Custom_IR" syncable="YES"/>
+        <relationship name="db_ir_code" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sub_Dev_DB_IR_Code" syncable="YES"/>
+        <relationship name="rf315m" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sub_Dev_RF315M" syncable="YES"/>
+        <relationship name="slave" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sub_Dev_Slave_Base" syncable="YES"/>
+    </entity>
+    <entity name="Sub_Dev_Custom_IR" representedClassName="Sub_Dev_Custom_IR" syncable="YES" codeGenerationType="class">
+        <attribute name="a_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="key_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Custom_RC_Key" syncable="YES"/>
+    </entity>
+    <entity name="Sub_Dev_DB_IR_Code" representedClassName="Sub_Dev_DB_IR_Code" syncable="YES" codeGenerationType="class">
+        <attribute name="a_db_device_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_ctrl_device_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Sub_Dev_RF315M" representedClassName="Sub_Dev_RF315M" syncable="YES" codeGenerationType="class">
+        <attribute name="a_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Sub_Dev_Slave_Base" representedClassName="Sub_Dev_Slave_Base" syncable="YES" codeGenerationType="class">
+        <attribute name="a_slave_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_online" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="curtain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Curtain" syncable="YES"/>
+        <relationship name="door_lock" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Door_Lock" syncable="YES"/>
+        <relationship name="door_sensor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Door_Sensor" syncable="YES"/>
+        <relationship name="ir_sensor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_IR_Sensor" syncable="YES"/>
+        <relationship name="macro_borad" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Macro_Borad" syncable="YES"/>
+        <relationship name="relay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Relay" syncable="YES"/>
+        <relationship name="siren" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Siren" syncable="YES"/>
+        <relationship name="switch" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Slave_Swith" syncable="YES"/>
+    </entity>
+    <entity name="Switch_Note" representedClassName="Switch_Note" syncable="YES" codeGenerationType="class">
+        <attribute name="a_road" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="c_on_off" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Sub_Dev_RF315M" positionX="-342" positionY="162" width="128" height="58"/>
+        <element name="Switch_Note" positionX="-702" positionY="468" width="126" height="88"/>
+        <element name="Custom_RC_Key" positionX="108" positionY="89" width="128" height="118"/>
+        <element name="Sub_Dev_Custom_IR" positionX="-74" positionY="26" width="128" height="73"/>
+        <element name="Sub_Dev_Slave_Base" positionX="-522" positionY="203" width="128" height="193"/>
+        <element name="Sub_Dev_DB_IR_Code" positionX="-153" positionY="116" width="126" height="73"/>
+        <element name="Sub_Dev_Base" positionX="-686" positionY="50" width="128" height="148"/>
+        <element name="Slave_Swith" positionX="-702" positionY="369" width="128" height="58"/>
+        <element name="Slave_Curtain" positionX="-704" positionY="270" width="128" height="58"/>
+        <element name="Slave_Relay" positionX="-524" positionY="434" width="128" height="88"/>
+        <element name="Slave_Macro_Borad" positionX="-200" positionY="386" width="128" height="88"/>
+        <element name="Slave_Safe_RC" positionX="-198" positionY="504" width="128" height="58"/>
+        <element name="Slave_Door_Lock" positionX="250" positionY="243" width="128" height="73"/>
+        <element name="Slave_IR_Sensor" positionX="-45" positionY="351" width="128" height="73"/>
+        <element name="Slave_Door_Sensor" positionX="108" positionY="306" width="128" height="73"/>
+        <element name="Slave_Siren" positionX="-360" positionY="414" width="128" height="103"/>
+        <element name="Macro_Borad_Road_Set" positionX="18" positionY="486" width="128" height="73"/>
+        <element name="GL_Dev_Thinker" positionX="-677" positionY="-70" width="128" height="88"/>
+        <element name="GL_Dev_Local_Host" positionX="-515" positionY="-25" width="128" height="43"/>
+        <element name="GL_Device_Base" positionX="-515" positionY="-243" width="128" height="178"/>
+        <element name="GL_Dev_PM25" positionX="-326" positionY="-72" width="128" height="103"/>
+        <element name="GL_Dev_Gas" positionX="-144" positionY="-126" width="128" height="88"/>
+        <element name="GL_Dev_Plug" positionX="-0" positionY="-216" width="128" height="58"/>
+        <element name="Plug_Road" positionX="70" positionY="-115" width="128" height="88"/>
+    </elements>
+</model>

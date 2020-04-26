@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Custom_IR_Key" representedClassName="Custom_IR_Key" syncable="YES" codeGenerationType="class">
+        <attribute name="a_key_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_key_picture_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_key_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="d_key_study_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="e_key_order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Device" representedClassName="Device" syncable="YES" codeGenerationType="class">
+        <attribute name="a_device_md5" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="b_device_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_device_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="d_room_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="e_room_order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="sub_device_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sub_Device" syncable="YES"/>
+    </entity>
+    <entity name="FBS_Note_Name" representedClassName="FBS_Note_Name" syncable="YES" codeGenerationType="class">
+        <attribute name="a_road" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Home" representedClassName="Home" syncable="YES" codeGenerationType="class">
+        <attribute name="a_home_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="b_home_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="c_home_admin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="d_ctrl_center_md5" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="e_menber_version" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="f_room_version" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="g_device_version" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="h_macro_version" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="device_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Device" syncable="YES"/>
+        <relationship name="menber_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Member" syncable="YES"/>
+        <relationship name="room_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Room" syncable="YES"/>
+    </entity>
+    <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
+        <attribute name="a_menber_account" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="b_menber_note" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Room" representedClassName="Room" syncable="YES" codeGenerationType="class">
+        <attribute name="a_room_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_room_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="c_room_picture_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Sub_Device" representedClassName="Sub_Device" syncable="YES" codeGenerationType="class">
+        <attribute name="a_sub_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_sub_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_sub_sub_tpye" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="d_sub_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="e_room_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="f_room_order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="custom_ir_key_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Custom_IR_Key" syncable="YES"/>
+        <relationship name="fb_switch_note_name_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FBS_Note_Name" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="a_account" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="b_session" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="home_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Home" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Custom_IR_Key" positionX="270" positionY="251" width="180" height="118"/>
+        <element name="Device" positionX="-27" positionY="-142" width="180" height="133"/>
+        <element name="FBS_Note_Name" positionX="36" positionY="252" width="180" height="73"/>
+        <element name="Home" positionX="-288" positionY="-217" width="180" height="208"/>
+        <element name="Member" positionX="-540" positionY="-144" width="180" height="75"/>
+        <element name="Room" positionX="-540" positionY="56" width="180" height="88"/>
+        <element name="Sub_Device" positionX="117" positionY="44" width="180" height="163"/>
+        <element name="User" positionX="-288" positionY="-333" width="180" height="88"/>
+    </elements>
+</model>

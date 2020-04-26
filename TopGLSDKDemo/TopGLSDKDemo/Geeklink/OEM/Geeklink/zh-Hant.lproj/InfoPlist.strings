@@ -1,0 +1,31 @@
+/*
+ InfoPlist.strings
+ Top
+ 
+ Created by Lieshutong on 15/10/25.
+ Copyright © 2015年 Geeklink. All rights reserved.
+ */
+
+CFBundleDisplayName = "智能良品";
+
+NSCameraUsageDescription = "App需要您同意訪問相機，才能掃描攝像頭二維碼";
+NSPhotoLibraryUsageDescription = "App需要您的同意訪問相冊，才能修改設備圖標";
+NSMicrophoneUsageDescription = "App需要您的同意訪問麥克風，才能對講攝像頭或進行語音控制";
+NSBluetoothPeripheralUsageDescription = "App需要您的同意訪問藍牙，才能配置設備網絡";
+NSPhotoLibraryAddUsageDescription = "App需要您的同意保存圖片或者視頻到系統相冊，才能保存攝像頭截圖";
+NSSpeechRecognitionUsageDescription = "App需要您的同意訪問語音識別，才能進行語音控制";
+NSSiriUsageDescription = "App需要您的同意訪問Siri, 來控制你的智能設備";
+NSLocationWhenInUseUsageDescription = "App需要您的同意訪問定位，來獲取天氣信息/Wi-Fi信息";
+NSFaceIDUsageDescription = "App需要您的同意訪問面容ID，來解鎖App";
+NSBluetoothPeripheralUsageDescription = "App需要您的同意訪問藍牙，才能配置設備網絡";
+NSBluetoothAlwaysUsageDescription = "App需要您的同意訪問藍牙，才能配置設備網絡";
+
+"MY_APP" = "智能良品";
+"MY_THINKER" = "思想者";
+"MY_THINKERPRO" = "思想者 Pro";
+"MY_MINIPI" = "小π智能遙控器";
+"MY_THINKERMINI" = "思想者 mini";
+"MY_THINKERMINI86" = "Mini面板主機";
+"MY_COMP_FULL" = "廣州極聯智能科技有限公司\nGeeklink Technology Co.Ltd";
+"MY_LINE" = "400-800-7922\n(工作日 9:00-12:00 13:40-18:30)";
+"MY_ADDR" = "廣州市番禺區大學城國家數字家庭應用示範產業基地（研發大廈）401號";

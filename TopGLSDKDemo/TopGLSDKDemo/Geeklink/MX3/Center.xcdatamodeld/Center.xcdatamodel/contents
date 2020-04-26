@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="18A314h" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Action" representedClassName="Action" syncable="YES" codeGenerationType="class">
+        <attribute name="a_action_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_action_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_action_dev_md5" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="d_action_sub_dev_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="e_action_value" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Condition" representedClassName="Condition" syncable="YES" codeGenerationType="class">
+        <attribute name="a_condition_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_condition_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_condition_dev_md5" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="d_condition_sub_dev_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="e_condition_value" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="CtrlCenter" representedClassName="CtrlCenter" syncable="YES" codeGenerationType="class">
+        <relationship name="accessory_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SecurityAccessory" syncable="YES"/>
+        <relationship name="macro_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Macro" syncable="YES"/>
+        <relationship name="mode_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SecurityMode" syncable="YES"/>
+        <relationship name="rule_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SecurityModeAutoRule" syncable="YES"/>
+    </entity>
+    <entity name="DevCondition" representedClassName="DevCondition" syncable="YES" codeGenerationType="class"/>
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="Macro" representedClassName="Macro" syncable="YES" codeGenerationType="class">
+        <attribute name="a_macro_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_macro_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="c_macro_picture_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="d_macro_auto_on_off" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="e_macro_auto_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="action_list" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Action" syncable="YES"/>
+        <relationship name="condition_list" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Condition" syncable="YES"/>
+    </entity>
+    <entity name="SecurityAccessory" representedClassName="SecurityAccessory" syncable="YES" codeGenerationType="class">
+        <attribute name="a_accessory_md5" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="SecurityDevice" representedClassName="SecurityDevice" syncable="YES" codeGenerationType="class">
+        <attribute name="a_gl_device_md5" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="b_sub_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="SecurityMode" representedClassName="SecurityMode" syncable="YES" codeGenerationType="class">
+        <attribute name="a_security_mode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="action_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Action" syncable="YES"/>
+        <relationship name="device_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SecurityDevice" syncable="YES"/>
+    </entity>
+    <entity name="SecurityModeAutoRule" representedClassName="SecurityModeAutoRule" syncable="YES" codeGenerationType="class">
+        <attribute name="a_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="b_time" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="c_week" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="d_mode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TimerCondition" representedClassName="TimerCondition" syncable="YES" codeGenerationType="class"/>
+    <entity name="ValidTimeCondition" representedClassName="ValidTimeCondition" syncable="YES" codeGenerationType="class"/>
+    <elements>
+        <element name="Action" positionX="1611" positionY="1878" width="128" height="120"/>
+        <element name="Condition" positionX="1314" positionY="1872" width="128" height="120"/>
+        <element name="CtrlCenter" positionX="1602" positionY="1451" width="128" height="103"/>
+        <element name="DevCondition" positionX="1080" positionY="1710" width="128" height="43"/>
+        <element name="Entity" positionX="1080" positionY="1629" width="128" height="43"/>
+        <element name="Macro" positionX="1440" positionY="1674" width="128" height="150"/>
+        <element name="SecurityAccessory" positionX="1915" positionY="1463" width="128" height="58"/>
+        <element name="SecurityDevice" positionX="1863" positionY="1874" width="128" height="73"/>
+        <element name="SecurityMode" positionX="1744" positionY="1674" width="128" height="88"/>
+        <element name="SecurityModeAutoRule" positionX="1917" positionY="1562" width="128" height="103"/>
+        <element name="TimerCondition" positionX="1080" positionY="1793" width="128" height="43"/>
+        <element name="ValidTimeCondition" positionX="1080" positionY="1872" width="128" height="43"/>
+    </elements>
+</model>

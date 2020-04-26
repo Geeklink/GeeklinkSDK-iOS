@@ -11,15 +11,22 @@
 #import "TopMainDeviceListVC.h"
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import <CoreLocation/CoreLocation.h>
+#import "SVProgressHUD/SVProgressHUD.h"
 
 @interface TopTestVC ()<CLLocationManagerDelegate>  {
-
+    
     NSString *apSsid;//当前Wi-Fi的SSID名
     NSString *apBssid;//当前Wi-Fi的BSSID名
     bool isConfigureRunning;//是否正在配置
     CGFloat textFieldBottomY;//输入框底部的屏幕高度
- 
+    
 }
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *tiplabel2;
+@property (weak, nonatomic) IBOutlet UIButton *otherWifiBtn;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *ssidLabel;//当前Wi-Fi
 @property (weak, nonatomic) IBOutlet UITextField *textField;//密码
@@ -40,39 +47,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
+    self.titleLabel.text = NSLocalizedString(@"Please connect to the Wi-Fi of the device ready to configure", @"");
+    self.tipLabel1.text = NSLocalizedString(@"If the router supports dual-band Wi-Fi, please connect to 2.4G Wi-Fi, do not connect to 5G Wi-Fi, and do not turn on the router dual-band integration function.", @"");
+    self.tiplabel2.text = NSLocalizedString(@"The device needs to be connected to the same LAN as the mobile phone. Please do not use the router guest network or turn on the router AP isolation function.", @"");
+    [self.otherWifiBtn setTitle:NSLocalizedString(@"Switch Other Wifi", @"") forState:UIControlStateNormal];
+    
+    self.titleLabel.adjustsFontSizeToFitWidth = true;
     self.deviceSaveKey = @"deviceSaveKey";
     
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey: self.deviceSaveKey] != nil) {
-           NSArray * deviceDictList = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceSaveKey];
-
-           for (NSDictionary * deviceDict in deviceDictList) {
-               TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
-               mainDeviceInfo.md5 = deviceDict[@"md5"];
-               mainDeviceInfo.token = deviceDict[@"token"];
-               NSNumber * mainTypeNum = deviceDict[@"mainType"];
-               mainDeviceInfo.mainType = mainTypeNum.integerValue;
-                NSNumber * subTypeNum = deviceDict[@"subType"];
-               mainDeviceInfo.subType = subTypeNum.integerValue;
-               [self.mainDeviceList addObject:mainDeviceInfo];
-
-           }
-       }
-     
+        NSArray * deviceDictList = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceSaveKey];
+        
+        for (NSDictionary * deviceDict in deviceDictList) {
+            TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
+            mainDeviceInfo.md5 = deviceDict[@"md5"];
+            mainDeviceInfo.token = deviceDict[@"token"];
+            NSNumber * mainTypeNum = deviceDict[@"mainType"];
+            mainDeviceInfo.mainType = mainTypeNum.integerValue;
+            NSNumber * subTypeNum = deviceDict[@"subType"];
+            mainDeviceInfo.subType = subTypeNum.integerValue;
+            [self.mainDeviceList addObject:mainDeviceInfo];
+            
+        }
+    }
     
-
-  
-   
-      [[TopGLAPIManager shareManager] linKAllMainDevice:self.mainDeviceList];
-
-     
+    
+    //
+    //   TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
+    //    mainDeviceInfo.md5 = @"b97c1b579a595eeb4b5fd36e28b771a0".lowercaseString;
+    //    mainDeviceInfo.token = @"2ACE5E33";
+    //
+    //
+    //    mainDeviceInfo.mainType = TopNetworkDevice;
+    //    mainDeviceInfo.subType = TopNetworkDeviceTypeSmartpi;
+    //    [self.mainDeviceList addObject:mainDeviceInfo];
+    
+    [[TopGLAPIManager shareManager] linKAllMainDevice:self.mainDeviceList];
+    
+    
     BOOL enable = [CLLocationManager locationServicesEnabled];
     NSInteger state = [CLLocationManager authorizationStatus];
     
     if (!enable || 2 > state) {// 尚未授权位置权限
         if (8 <= [[UIDevice currentDevice].systemVersion floatValue]) {
-            NSLog(@"系统位置权限授权弹窗");
             // 系统位置权限授权弹窗
             self.locationManager = [[CLLocationManager alloc] init];
             self.locationManager.delegate = self;
@@ -82,15 +100,15 @@
     }
     else {
         if (state == kCLAuthorizationStatusDenied) {// 授权位置权限被拒绝
-            NSLog(@"授权位置权限被拒绝");
-            UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:@"提示"
-                                                                              message:@"访问位置权限暂未授权"
+            
+            UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Hint", @"")
+                                                                              message:NSLocalizedString(@"Hint", @"Unauthorized access to location")
                                                                        preferredStyle:UIAlertControllerStyleAlert];
-            [alertCon addAction:[UIAlertAction actionWithTitle:@"暂不设置" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [alertCon addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Not Set", @"") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 
             }]];
             
-            [alertCon addAction:[UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [alertCon addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Set",@"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 dispatch_after(0.2, dispatch_get_main_queue(), ^{
                     NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];// 跳转至系统定位授权
                     if( [[UIApplication sharedApplication] canOpenURL:url]) {
@@ -110,8 +128,8 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-   
-
+    
+    
     //读取当前Wi-Fi名字
     apSsid = @"";
     apBssid = @"";
@@ -126,14 +144,14 @@
     
     
     //更新界面显示
-    self.ssidLabel.text = [NSString stringWithFormat:@"当前Wi-Fi：%@", ([apSsid isEqualToString:@""] ? @"未找到": apSsid)];
+    self.ssidLabel.text = [NSString stringWithFormat:@"Current Wi-Fi：%@", ([apSsid isEqualToString:@""] ? NSLocalizedString(@"Not Find", @""): apSsid)];
     
 }
 
 #pragma mark - 定位回调(CLLocationManagerDelegate)
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
     if (status == kCLAuthorizationStatusNotDetermined) return; // 因为会多次回调，所以未确认权限不反悔
-  
+    
 }
 - (void)gotoTopMainDeviceListVC {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -142,7 +160,7 @@
     [self showViewController:vc sender:nil];
 }
 - (IBAction)clickDeviceListBtn:(id)sender {
-   
+    
     [self gotoTopMainDeviceListVC];
 }
 
@@ -178,7 +196,7 @@
     }
     
     //更新界面显示
-    self.ssidLabel.text = [NSString stringWithFormat:@"当前Wi-Fi：%@", ([apSsid isEqualToString:@""] ? @"未找到": apSsid)];
+    self.ssidLabel.text =  [NSString stringWithFormat:@"Current Wi-Fi：%@", ([apSsid isEqualToString:@""] ? NSLocalizedString(@"Not Find", @""): apSsid)];
 }
 
 //键盘边距变化
@@ -217,24 +235,24 @@
     } else {
         //检查配置信息
         if ([apSsid isEqualToString:@""]) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"没有找到Wi-Fi" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Not Connect Wi-Fi", @"") message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
             [self presentViewController:alert animated:YES completion:nil];
             
         } else if ((self.textField.text.length > 0) && (self.textField.text.length < 8)) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"输入的Wi-Fi密码太短" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Wi-Fi password length is wrong", @"") message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
             [self presentViewController:alert animated:YES completion:nil];
             
         } else if ([apSsid containsString:@"5G"] || [apSsid containsString:@"5g"]) {
             
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"输入的Wi-Fi密码太短" message:nil preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-            [alert addAction:[UIAlertAction actionWithTitle:@"切换Wi-Fi" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"5g Wi-Fi is not supported", @"") message:nil preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil]];
+            [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Switch Wifi", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 //切换Wi-Fi
                 [self onChangeWifi:[UIButton new]];
             }]];
-            [alert addAction:[UIAlertAction actionWithTitle:@"继续配置" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [alert addAction:[UIAlertAction actionWithTitle:@"Continue" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
                 //开始配网
                 [self onConfigureStart];
             }]];
@@ -258,28 +276,30 @@
 
 //开始配网
 - (void)onConfigureStart {
-  
+    
     isConfigureRunning = YES;
     
     //更新界面显示
-    self.guideLabel.text = @"正在配置中";
-    [self.configureButton setTitle:@"停止配置" forState:UIControlStateNormal];
+    self.guideLabel.text = NSLocalizedString(@"Configuring", @"");
+    [self.configureButton setTitle:NSLocalizedString(@"Stop configuration",@"") forState:UIControlStateNormal];
     //获取Wi-Fi密码，在非主线程时获取会报异常
     NSString *apPwd = self.textField.text;
     [TopGLAPIManager.shareManager configerWifiWithApBssid:apBssid andApSsid:apSsid andPassword:apPwd configerResult:^(TopConfigerDevResult * _Nonnull configerDevResult) {
-         NSMutableArray * mutDeviceDictList = [NSMutableArray array];
+        NSMutableArray * mutDeviceDictList = [NSMutableArray array];
         if (configerDevResult.state == GLStateTypeOk) {
             // 我这里只是暂时将数据保存到本地
+            [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Success", @"")];
             if ([[NSUserDefaults standardUserDefaults] objectForKey: self.deviceSaveKey] != nil) {
                 NSArray * deviceDictList = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceSaveKey];
-               
+                
                 for (NSDictionary * deviceDict in deviceDictList) {
                     NSString * str = deviceDict[@"md5"];
                     if ([str isEqualToString:configerDevResult.md5] == false) {
-                          [mutDeviceDictList addObject: deviceDict];
+                        [mutDeviceDictList addObject: deviceDict];
                     }
-                  
+                    
                 }
+                
             }
             NSMutableDictionary * mutDeviceDict = [NSMutableDictionary dictionary];
             mutDeviceDict[@"md5"] = configerDevResult.md5;
@@ -298,26 +318,34 @@
             [self.mainDeviceList addObject:mainDeviceInfo];
             
             [[NSUserDefaults standardUserDefaults] setObject:mutDeviceDictList forKey:self.deviceSaveKey];
-        
+            
+        }else if (configerDevResult.state == GLStateTypeFullError){
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"The test device is full. For cooperation, please contact Geeklink Technology Co.Ltd", @"") message:nil preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else{
+            
+            [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Failure", @"")];
         }
         
     }];
-  
+    
     
     //开始异步配置
-  
     
- 
+    
+    
     
 }
 
 //停止配网
 - (void)onConfigureStop {
     isConfigureRunning = NO;
-    self.guideLabel.text = @"点击配置进行配置";
-    [self.configureButton setTitle:@"配置" forState:UIControlStateNormal];
+    self.guideLabel.text = NSLocalizedString(@"Clicked To Configure", @"");
+    [self.configureButton setTitle:NSLocalizedString(@"Configure", @"") forState:UIControlStateNormal];
     [[TopGLAPIManager shareManager] stopConfigureWifi];
-
+    
 }
 
 //MARK: - GeeklinkDelegate 代理实现
@@ -327,19 +355,7 @@
     printf("GeeklinkWifiSwiftVC geeklinkLogOutput: %s\n", [log UTF8String]);
 }
 
-/**设置家庭成功 */
-- (void)homeSetSuccess:(NSString *)homeId MD5:(NSString *)MD5 type:(int32_t)type {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"添加成功" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
-}
 
-/**设置家庭失败 */
-- (void)homeSetFailed:(NSString *)errorMessage {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"添加失败:%@", errorMessage] message:nil preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
-}
 
 @end
 

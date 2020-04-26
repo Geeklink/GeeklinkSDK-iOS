@@ -1,0 +1,164 @@
+/*
+ Localizable.strings
+ Single
+ 
+ Created by 杨飞飞 on 2020/4/23.
+ Copyright © 2020 Geeklink. All rights reserved.
+ */
+"TV" = "码库电视";
+"STB" = "码库机顶盒";
+"IPTV" = "码库IPTV";
+"AC" = "码库空调";
+"Custom" = "自定义学习遥控器";
+"Click To Send" = "点击发送";
+"%ld keys" = "%d个按键";
+"Keys List" = "按键列表";
+"Delete" = "删除";
+
+"Current Wi-Fi：%@" = "当前Wi-Fi:";
+"Not Find" = "没有发现";
+"Not Connect Wi-Fi" = "未链接Wi-Fi";
+"Wi-Fi password length is wrong" = "Wi-Fi密码长度不对";
+"5g Wi-Fi is not supported" = "不支持5gWi-Fi";
+"Cancel" = "取消";
+"Switch Wifi" = "切换Wi-Fi";
+"Continue" = "继续配网";
+"Configuring" = "正在配置";
+"Stop configuration" = "停止配置";
+"Clicked To Configure" = "点击进行配置";
+"Configure" =  "配置";
+"Unauthorized access to location" = "访问位置权限暂未授权";
+"Set" = "设置";
+"Hint" = "温馨提示" ;
+"Not Set" = "不设置";
+"The test device is full. For cooperation, please contact Geeklink Technology Co.Ltd" = "测试设备已满,需要合作请联系广州极联智能科技有限公司";
+"Success" = "成功";
+"Failure" = "失败";
+"Cancel" = "取消";
+
+"Offline"= "离线";
+"Local online" = "本地在线";
+"Remote online" = "远程在线";
+"Not Bind" = "未绑定";
+"View Device" = "查看设备";
+"Delete" = "删除";
+"Status" = "状态";
+"Current version" = "当前版本";
+"New version" = "新版本";
+"Device Time" = "设备时间";
+"Sub Deivce" = "子设备";
+"Timed list" = "定时列表";
+"Infrared code reading and sending" = "红外码读取和发送";
+
+
+"Power" = "电源";
+"Mode" = "模式";
+"Dir" = "风向";
+"Speed" = "风速";
+"Tepm+" = "温度+";
+"Tepm-" = "温度-";
+
+
+"Up" = "上";
+"Down" = "下";
+"Left" = "左";
+"Right" = "右";
+
+"Menu" = "菜单";
+"Home" = "首页";
+"Back" = "返回";
+"Application" = "应用";
+
+"Volume+" = "音量+";
+"Volume-" = "音量-";
+"Setting-" = "音量-";
+
+"Channel+" = "频道+";
+"Channel-" = "频道-";
+"List" = "列表";
+
+"EXIT" = "推出";
+"Page-" = "上一页";
+"Page+" = "下一页";
+"Sound" = "声音";
+"Message" = "信息";
+"Mute" = "静音";
+"Love" = "喜爱";
+"Guide" = "导视";
+"TV" = "TV";
+"Broadcast" = "点播";
+"News"  = "资信";
+"Stock" = "股票";
+"Email" = "邮件";
+"Games" = "游戏";
+"List 2" = "列表2";
+"Application 2" = "应用2";
+"Record" = "记录";
+
+"Stop" = "停止";
+
+"Rewind" = "快退";
+"Fast" = "快进";
+"暂停/播放" =  "暂停/播放";
+"Collect1" = "收藏1";
+"Collect2" = "收藏2";
+"Collect3" = "收藏3";
+"Collect4" = "收藏4";
+"Collect5" = "收藏5";
+"Liyin" = "丽音";
+"Audio" = "伴音";
+"Standard" = "制式";
+"Sleep" = "睡眠";
+
+"Alternate programs" = "节目交替";
+"Exchange" = "交换";
+"PIP" = "画中画";
+"Normal" = "正常";
+"Screen Display" = "屏显";
+"Picture" = "图片";
+"Please point the infrared remote control at the main unit and press the remote control button within 20 seconds." = "请在20秒内将红外遥控器对准主机并且按下遥控器按键。";
+"Control" = "控制";
+"Update" = "更新";
+
+"Repeat:%@ %@" = "重复";
+"(On)" = "（开）";
+"(Off)" = "（关）";
+"Edit" = "编辑";
+"Once" = "一次";
+"Working Day" = "工作日";
+"Weekend" = "周末";
+"Every Day" = "每天";
+"Mon" = "一";
+"Tue" = "二";
+"Wed" = "三";
+"Thur" = "四";
+"Fri" = "五";
+"Sat" = "六";
+"Sun" = "日";
+"Timer" = "定时";
+"Perform action" = "执行动作";
+"Name（Cannot exceed 24 bytes）" = "名称(不能超过24字节)";
+"Startup time（minutes）" = "开始时间(分钟)";
+"Repeat（See parameter description）" = "重复，(看参数说明)";
+"AUTO" = "自动";
+"COOL" = "制冷";
+"DRY" = "除湿";
+"FAN" = "送风";
+"HEAT" = "制热";
+"subID:%ld Status：%@ Mode: Speed：%ld Dir：%ld, Temp：%ld" = "subID:%ld 状态：%@ 模式: 速度：%ld 风向：%ld, 温度：%ld";
+"Execute the action immediately after the last action is executed" = "上一个动作执行后马上执行该动作";
+"Add" = "添加";
+"Add up to 16 actions" = "最多添加16个动作";
+"The remote control has no key" = "该遥控器没有按键";
+
+"%ld keys" = "%d个按键";
+"Please point the infrared remote control at the main unit and press the remote control button within 20 seconds." = "请在20秒内将红外遥控器对准主机并且按下遥控器按键。";
+"Cancel success" = "取消成功";
+"Clicked to send" = "点击发送";
+"Status：%@ Mode:%ld Speed：%ld Dir：%ld, Temp：%ld" = "状态：%@ 模式:%ld 风速：%ld 风向：%ld, 温度：%ld";
+"Up to 30 degrees Celsius" = "最高30摄氏度";
+"Minimum 16 degrees Celsius" = "最低16摄氏度";
+"Please connect to the Wi-Fi of the device ready to configure" = "请连接到设备准备配置的工作Wi-Fi";
+"If the router supports dual-band Wi-Fi, please connect to 2.4G Wi-Fi, do not connect to 5G Wi-Fi, and do not turn on the router dual-band integration function." = "如果是路由器支持双频Wi-Fi，请连接2.4G的Wi-Fi，不要连接5GWi-Fi，并且不要打开路由器双频合一功能。";
+"The device needs to be connected to the same LAN as the mobile phone. Please do not use the router guest network or turn on the router AP isolation function." = "设备需要和手机连接到相同局域网下，请不要使用路由器访客网络，或者打开路由器AP隔离功能。";
+"Switch Other Wifi" = "切换其他Wi-Fi";
