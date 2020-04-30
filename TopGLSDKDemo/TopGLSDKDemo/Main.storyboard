@@ -996,6 +996,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="configureButton" destination="Ufx-5K-UTN" id="6LP-YP-cFW"/>
+                        <outlet property="deviceListItem" destination="olt-4O-YFj" id="dyE-7t-ZwA"/>
                         <outlet property="guideLabel" destination="nhV-kQ-VPe" id="ntK-6k-kWx"/>
                         <outlet property="otherWifiBtn" destination="Fny-AM-8bU" id="2SF-0j-FTU"/>
                         <outlet property="ssidLabel" destination="wL5-o2-6ek" id="ixd-3n-qEX"/>

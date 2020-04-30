@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *guideLabel;//提示
 @property (weak, nonatomic) IBOutlet UIButton *configureButton;//配置按钮
 @property (nonatomic, strong) CLLocationManager         *locationManager;       // 定位获取Wi-Fi
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *deviceListItem;
 
 @property (copy, nonatomic) NSString * deviceSaveKey;//本地设备保存的key
 
@@ -51,10 +52,13 @@
     self.tipLabel1.text = NSLocalizedString(@"If the router supports dual-band Wi-Fi, please connect to 2.4G Wi-Fi, do not connect to 5G Wi-Fi, and do not turn on the router dual-band integration function.", @"");
     self.tiplabel2.text = NSLocalizedString(@"The device needs to be connected to the same LAN as the mobile phone. Please do not use the router guest network or turn on the router AP isolation function.", @"");
     [self.otherWifiBtn setTitle:NSLocalizedString(@"Switch Other Wifi", @"") forState:UIControlStateNormal];
+    [self.configureButton setTitle:NSLocalizedString(@"Configure", @"") forState:UIControlStateNormal];
+    self.textField.placeholder = NSLocalizedString(@"Please input pass word", @"");
+     self.guideLabel.text = NSLocalizedString(@"Clicked To Configure", @"");
     
     self.titleLabel.adjustsFontSizeToFitWidth = true;
     self.deviceSaveKey = @"deviceSaveKey";
-    
+    self.deviceListItem.title = NSLocalizedString(@"Device List", @"");
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey: self.deviceSaveKey] != nil) {
         NSArray * deviceDictList = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceSaveKey];

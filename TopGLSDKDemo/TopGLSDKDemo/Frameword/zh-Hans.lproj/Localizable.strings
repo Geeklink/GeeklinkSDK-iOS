@@ -162,3 +162,5 @@
 "If the router supports dual-band Wi-Fi, please connect to 2.4G Wi-Fi, do not connect to 5G Wi-Fi, and do not turn on the router dual-band integration function." = "如果是路由器支持双频Wi-Fi，请连接2.4G的Wi-Fi，不要连接5GWi-Fi，并且不要打开路由器双频合一功能。";
 "The device needs to be connected to the same LAN as the mobile phone. Please do not use the router guest network or turn on the router AP isolation function." = "设备需要和手机连接到相同局域网下，请不要使用路由器访客网络，或者打开路由器AP隔离功能。";
 "Switch Other Wifi" = "切换其他Wi-Fi";
+"Please input pass word" = "请输入密码";
+"Device List" = "设备列表";
