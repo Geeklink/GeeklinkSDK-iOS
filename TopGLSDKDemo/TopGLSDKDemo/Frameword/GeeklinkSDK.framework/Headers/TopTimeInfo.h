@@ -12,18 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TopTimeInfo : NSObject
 
-/*定时ID*/
+/*timer id
+ 定时ID*/
 @property (nonatomic , assign) NSInteger timerId;
-/*定时名称*/
+/*timer name： Up to 24 characters
+ 定时名称： 最多24个字节*/
 @property (nonatomic , copy) NSString * name;
-/*定时启动时间，以分为单位0 - 1399*/
+/* Timed start time. Minute.
+ 定时启动时间，以秒为单位*/
 @property (nonatomic , assign) NSInteger time;
-/*重复0x00-0x7f ，0为一次，31 = 0x1e = 00011110（ 二三四五  ）*/
+/* repeat: 0 is once, 31 = 0x1e = 00011110 (Tuesday Wednesday Thursday Friday)
+ 重复: 0为一次，31 = 0x1e = 00011110（ 二三四五  ）*/
 @property (nonatomic , assign) NSInteger week;
-/*启动和关闭*/
+/*on or off. 启动和关闭*/
 @property (nonatomic , assign) BOOL onOff;
-
-/*动作列表*/
+/*Action list
+ 动作列表*/
 @property (nonatomic , strong) NSArray * actionInfoList;
 
 @end

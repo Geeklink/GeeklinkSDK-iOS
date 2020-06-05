@@ -691,7 +691,7 @@ typedef enum{
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    [[TopGLAPIManager shareManager] deviceTimezoneWithMd5:self.mainDeviceInfo.md5 action:GLTimezoneActionTimezoneActionSet timezone:[self getAllTimeZoneTimeDiff:(int)indexPath.row] * 60 complete:^(TopResultInfo * _Nonnull resucltInfo) {
+    [[TopGLAPIManager shareManager] deviceTimezoneWithMd5:self.mainDeviceInfo.md5 action:GLTimezoneActionTimezoneActionSet timezone:[self getAllTimeZoneTimeDiff:(int)indexPath.row] * 60 complete:^(TopGLAPIResult * _Nonnull resucltInfo) {
         if (resucltInfo.state == GLStateTypeOk ) {
             [self.navigationController popViewControllerAnimated:true];
         }

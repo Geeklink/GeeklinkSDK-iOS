@@ -9,6 +9,7 @@
 #import "TopMainDeviceListVC.h"
 #import "TopMainDeviceInfoVC.h"
 #import "SVProgressHUD/SVProgressHUD.h"
+#import "TopDisinfectionLampMainVC.h"
 @interface TopMainDeviceListVC ()<UITableViewDelegate, UITableViewDataSource, TopGLAPIManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -33,7 +34,7 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     TopMainDeviceInfo * deviceInfo = self.mainDeviceList[indexPath.row];
     cell.textLabel.text = deviceInfo.md5;
-    [[TopGLAPIManager shareManager] getDeviceStateInfo: deviceInfo.md5 complete:^(TopResultInfo * _Nonnull resucltInfo) {
+    [[TopGLAPIManager shareManager] getDeviceStateInfo: deviceInfo.md5 complete:^(TopGLAPIResult * _Nonnull resucltInfo) {
         switch (resucltInfo.mainDevStateInfo.state) {
           
             case GLDevConnectStateOffline:
@@ -46,7 +47,7 @@
                 cell.detailTextLabel.text = NSLocalizedString(@"Remote online", @"");
                 break;
             case GLDevConnectStateNeedBindAgain:
-                cell.detailTextLabel.text = NSLocalizedString(@"", @"");
+                cell.detailTextLabel.text = NSLocalizedString(@"Offline", @"");
                 break;
 //            case GLDevConnectStateCount:
 //                break;
@@ -83,12 +84,14 @@
     
     __weak typeof(self) weakSelf  = self;
     UIAlertAction * deleteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Delete",@"") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [TopGLAPIManager.shareManager deleteMainDevice:mainDeivce.md5 complete:^(TopResultInfo * _Nonnull resucltInfo) {
+        [TopGLAPIManager.shareManager deleteMainDevice:mainDeivce.md5 complete:^(TopGLAPIResult * _Nonnull resucltInfo) {
             if (resucltInfo.state == GLStateTypeOk) {
+               
                 [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Success", @"")];
-            
-                [weakSelf.mainDeviceList removeObject:mainDeivce];
-            
+                
+                
+                [weakSelf.mainDeviceList removeObjectAtIndex:indexPath.row];
+                
                 [weakSelf.tableView reloadData];
                 
                 // 我这里只是暂时将数据保存到本地
@@ -97,17 +100,13 @@
                     NSMutableArray * mutDeviceDictList = [NSMutableArray array];
                     for (NSDictionary * deviceDict in deviceDictList) {
                         NSString * str = deviceDict[@"md5"];
-                        if ([str isEqualToString:resucltInfo.md5] == false) {
+                        if ([str isEqualToString:mainDeivce.md5] == false) {
                             [mutDeviceDictList addObject: deviceDict];
                         }
                         
                     }
                     [[NSUserDefaults standardUserDefaults] setObject:mutDeviceDictList forKey:@"deviceSaveKey"];
                 }
-               
-             
-               
-                
             }else {
                  [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Failure", @"")];
             }
@@ -129,13 +128,29 @@
     
 }
 - (void)gotoTopMainDeviceListVC: (TopMainDeviceInfo *)deviceInfo {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    TopMainDeviceInfoVC *vc = [storyboard instantiateViewControllerWithIdentifier:@"TopMainDeviceInfoVC"];
-    vc.mainDeviceInfo = deviceInfo;
-    [self showViewController:vc sender:nil];
+    switch (deviceInfo.geeklinkDevType) {
+      
+        case GLDeviceMainTypeGeeklinkDev:{
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            TopMainDeviceInfoVC *vc = [storyboard instantiateViewControllerWithIdentifier:@"TopMainDeviceInfoVC"];
+            vc.mainDeviceInfo = deviceInfo;
+            [self showViewController:vc sender:nil];
+        }
+          
+            break;
+        case GLGeeklinkDevTypeDisinfectionLamp: {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            TopDisinfectionLampMainVC *vc = [storyboard instantiateViewControllerWithIdentifier:@"TopDisinfectionLampMainVC"];
+            vc.mainDeviceInfo = deviceInfo;
+            [self showViewController:vc sender:nil];
+        }
+           
+            break;
+    }
+  
 }
 
-- (void)deviceStateChange:(TopResultInfo *)resultInfo {
+- (void)deviceStateChange:(TopGLSmartPiResultInfo *)resultInfo {
     if (resultInfo.subId == 0){//是主机状态变化
         [self.tableView reloadData];
         

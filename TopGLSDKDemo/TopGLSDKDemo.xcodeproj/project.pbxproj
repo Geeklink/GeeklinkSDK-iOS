@@ -7,20 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		585D60272452C5D300A0FB22 /* TopCtrDBRCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D600C2452C5CF00A0FB22 /* TopCtrDBRCVC.m */; };
-		585D60282452C5D300A0FB22 /* TopTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D600E2452C5CF00A0FB22 /* TopTestVC.m */; };
-		585D60292452C5D300A0FB22 /* TopSubDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D600F2452C5CF00A0FB22 /* TopSubDeviceVC.m */; };
-		585D602A2452C5D300A0FB22 /* TopCustomDevKeyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60102452C5CF00A0FB22 /* TopCustomDevKeyListVC.m */; };
-		585D602B2452C5D300A0FB22 /* TopCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60122452C5D000A0FB22 /* TopCodeVC.m */; };
-		585D602C2452C5D300A0FB22 /* TopDBRCBrandFileIdListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60132452C5D000A0FB22 /* TopDBRCBrandFileIdListVC.m */; };
-		585D602D2452C5D300A0FB22 /* TopSelectSubDeviceActionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60152452C5D000A0FB22 /* TopSelectSubDeviceActionVC.m */; };
-		585D602E2452C5D300A0FB22 /* TopMainDeviceInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60162452C5D000A0FB22 /* TopMainDeviceInfoVC.m */; };
-		585D602F2452C5D300A0FB22 /* TopMainDeviceListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D601A2452C5D100A0FB22 /* TopMainDeviceListVC.m */; };
-		585D60302452C5D300A0FB22 /* TopTimerListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D601B2452C5D100A0FB22 /* TopTimerListVC.m */; };
-		585D60312452C5D300A0FB22 /* TopDBRCBrandListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60202452C5D200A0FB22 /* TopDBRCBrandListVC.m */; };
-		585D60322452C5D300A0FB22 /* TopTimeDetialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60232452C5D200A0FB22 /* TopTimeDetialVC.m */; };
-		585D60332452C5D300A0FB22 /* TopAddDeviceTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60242452C5D300A0FB22 /* TopAddDeviceTypeVC.m */; };
-		585D60342452C5D300A0FB22 /* TopSetTimeZoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60252452C5D300A0FB22 /* TopSetTimeZoneVC.m */; };
 		585D60422452C66200A0FB22 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60382452C66000A0FB22 /* SVIndefiniteAnimatedView.m */; };
 		585D60432452C66200A0FB22 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D60392452C66000A0FB22 /* SVProgressHUD.m */; };
 		585D60442452C66200A0FB22 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 585D603A2452C66000A0FB22 /* SVProgressHUD.bundle */; };
@@ -28,18 +14,35 @@
 		585D60462452C66200A0FB22 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D603E2452C66100A0FB22 /* SVRadialGradientLayer.m */; };
 		585D60472452C68000A0FB22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 585D60492452C68000A0FB22 /* Localizable.strings */; };
 		585D604E2452C6D900A0FB22 /* Timezone.strings in Resources */ = {isa = PBXBuildFile; fileRef = 585D60502452C6D900A0FB22 /* Timezone.strings */; };
-		585D60542452C72E00A0FB22 /* GeeklinkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585D60522452C71500A0FB22 /* GeeklinkSDK.framework */; };
-		585D60552452C72E00A0FB22 /* GeeklinkSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 585D60522452C71500A0FB22 /* GeeklinkSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		586734A92446BCB90049B1E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 586734A82446BCB90049B1E5 /* AppDelegate.m */; };
 		586734B42446BCBC0049B1E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586734B32446BCBC0049B1E5 /* Assets.xcassets */; };
 		586734B72446BCBC0049B1E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586734B52446BCBC0049B1E5 /* LaunchScreen.storyboard */; };
 		586734BA2446BCBC0049B1E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 586734B92446BCBC0049B1E5 /* main.m */; };
 		586734C42446BCBC0049B1E5 /* TopGLSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 586734C32446BCBC0049B1E5 /* TopGLSDKDemoTests.m */; };
 		586734CF2446BCBC0049B1E5 /* TopGLSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 586734CE2446BCBC0049B1E5 /* TopGLSDKDemoUITests.m */; };
-		5867350A2446BD8A0049B1E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586735092446BD8A0049B1E5 /* Main.storyboard */; };
 		588C6D2E244D31780073C046 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588C6D2D244D31780073C046 /* CoreLocation.framework */; };
 		588C6D32244D32980073C046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 588C6D31244D32980073C046 /* InfoPlist.strings */; };
 		588C6D35244D34500073C046 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 588C6D33244D34500073C046 /* SceneDelegate.m */; };
+		58D13077248A3687002777AD /* TopMainDeviceListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AD7248A3675002777AD /* TopMainDeviceListVC.m */; };
+		58D13078248A3687002777AD /* TopMainDeviceInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AD9248A3675002777AD /* TopMainDeviceInfoVC.m */; };
+		58D13079248A3687002777AD /* TopSelectSubDeviceActionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12ADC248A3675002777AD /* TopSelectSubDeviceActionVC.m */; };
+		58D1307A248A3687002777AD /* TopCtrDBRCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12ADE248A3675002777AD /* TopCtrDBRCVC.m */; };
+		58D1307B248A3687002777AD /* TopTimerListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AE0248A3675002777AD /* TopTimerListVC.m */; };
+		58D1307C248A3687002777AD /* TopTimeDetialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AE2248A3675002777AD /* TopTimeDetialVC.m */; };
+		58D1307D248A3687002777AD /* TopCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AE4248A3675002777AD /* TopCodeVC.m */; };
+		58D1307E248A3687002777AD /* TopAddDeviceTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AE7248A3675002777AD /* TopAddDeviceTypeVC.m */; };
+		58D1307F248A3687002777AD /* TopSubDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AE9248A3675002777AD /* TopSubDeviceVC.m */; };
+		58D13080248A3687002777AD /* TopDBRCBrandFileIdListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AEB248A3675002777AD /* TopDBRCBrandFileIdListVC.m */; };
+		58D13081248A3687002777AD /* TopDBRCBrandListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AED248A3675002777AD /* TopDBRCBrandListVC.m */; };
+		58D13082248A3687002777AD /* TopCustomDevKeyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AEE248A3675002777AD /* TopCustomDevKeyListVC.m */; };
+		58D13083248A3687002777AD /* TopDisinfectionLampTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AF5248A3676002777AD /* TopDisinfectionLampTimerVC.m */; };
+		58D13084248A3687002777AD /* TopDisinfectionLampMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AF6248A3676002777AD /* TopDisinfectionLampMainVC.m */; };
+		58D13085248A3687002777AD /* TopDisinfectionLampRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AF7248A3676002777AD /* TopDisinfectionLampRecordVC.m */; };
+		58D13086248A3687002777AD /* TopSetTimeZoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AF8248A3676002777AD /* TopSetTimeZoneVC.m */; };
+		58D13087248A3687002777AD /* TopTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D12AF9248A3677002777AD /* TopTestVC.m */; };
+		58D13501248A369B002777AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D13500248A369B002777AD /* Main.storyboard */; };
+		58D13504248A36DB002777AD /* GeeklinkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D13502248A36CA002777AD /* GeeklinkSDK.framework */; };
+		58D13505248A36DB002777AD /* GeeklinkSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58D13502248A36CA002777AD /* GeeklinkSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				585D60552452C72E00A0FB22 /* GeeklinkSDK.framework in Embed Frameworks */,
+				58D13505248A36DB002777AD /* GeeklinkSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,34 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		585D600B2452C5CF00A0FB22 /* TopCustomDevKeyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCustomDevKeyListVC.h; sourceTree = "<group>"; };
-		585D600C2452C5CF00A0FB22 /* TopCtrDBRCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCtrDBRCVC.m; sourceTree = "<group>"; };
-		585D600D2452C5CF00A0FB22 /* TopSubDeviceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSubDeviceVC.h; sourceTree = "<group>"; };
-		585D600E2452C5CF00A0FB22 /* TopTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTestVC.m; sourceTree = "<group>"; };
-		585D600F2452C5CF00A0FB22 /* TopSubDeviceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSubDeviceVC.m; sourceTree = "<group>"; };
-		585D60102452C5CF00A0FB22 /* TopCustomDevKeyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCustomDevKeyListVC.m; sourceTree = "<group>"; };
-		585D60112452C5D000A0FB22 /* TopCtrDBRCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCtrDBRCVC.h; sourceTree = "<group>"; };
-		585D60122452C5D000A0FB22 /* TopCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCodeVC.m; sourceTree = "<group>"; };
-		585D60132452C5D000A0FB22 /* TopDBRCBrandFileIdListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDBRCBrandFileIdListVC.m; sourceTree = "<group>"; };
-		585D60142452C5D000A0FB22 /* TopTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTestVC.h; sourceTree = "<group>"; };
-		585D60152452C5D000A0FB22 /* TopSelectSubDeviceActionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSelectSubDeviceActionVC.m; sourceTree = "<group>"; };
-		585D60162452C5D000A0FB22 /* TopMainDeviceInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMainDeviceInfoVC.m; sourceTree = "<group>"; };
-		585D60172452C5D000A0FB22 /* TopSetTimeZoneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSetTimeZoneVC.h; sourceTree = "<group>"; };
-		585D60182452C5D100A0FB22 /* TopDBRCBrandListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDBRCBrandListVC.h; sourceTree = "<group>"; };
-		585D60192452C5D100A0FB22 /* TopTimeDetialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTimeDetialVC.h; sourceTree = "<group>"; };
-		585D601A2452C5D100A0FB22 /* TopMainDeviceListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMainDeviceListVC.m; sourceTree = "<group>"; };
-		585D601B2452C5D100A0FB22 /* TopTimerListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTimerListVC.m; sourceTree = "<group>"; };
-		585D601C2452C5D100A0FB22 /* TopMainDeviceListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMainDeviceListVC.h; sourceTree = "<group>"; };
-		585D601D2452C5D100A0FB22 /* TopCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCodeVC.h; sourceTree = "<group>"; };
-		585D601E2452C5D200A0FB22 /* TopAddDeviceTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAddDeviceTypeVC.h; sourceTree = "<group>"; };
-		585D601F2452C5D200A0FB22 /* TopSelectSubDeviceActionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSelectSubDeviceActionVC.h; sourceTree = "<group>"; };
-		585D60202452C5D200A0FB22 /* TopDBRCBrandListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDBRCBrandListVC.m; sourceTree = "<group>"; };
-		585D60212452C5D200A0FB22 /* TopDBRCBrandFileIdListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDBRCBrandFileIdListVC.h; sourceTree = "<group>"; };
-		585D60222452C5D200A0FB22 /* TopMainDeviceInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMainDeviceInfoVC.h; sourceTree = "<group>"; };
-		585D60232452C5D200A0FB22 /* TopTimeDetialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTimeDetialVC.m; sourceTree = "<group>"; };
-		585D60242452C5D300A0FB22 /* TopAddDeviceTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAddDeviceTypeVC.m; sourceTree = "<group>"; };
-		585D60252452C5D300A0FB22 /* TopSetTimeZoneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSetTimeZoneVC.m; sourceTree = "<group>"; };
-		585D60262452C5D300A0FB22 /* TopTimerListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTimerListVC.h; sourceTree = "<group>"; };
 		585D60382452C66000A0FB22 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		585D60392452C66000A0FB22 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		585D603A2452C66000A0FB22 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -117,7 +92,6 @@
 		585D604B2452C6A700A0FB22 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		585D604F2452C6D900A0FB22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Timezone.strings; sourceTree = "<group>"; };
 		585D60512452C6DF00A0FB22 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Timezone.strings"; sourceTree = "<group>"; };
-		585D60522452C71500A0FB22 /* GeeklinkSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeeklinkSDK.framework; sourceTree = "<group>"; };
 		586734A42446BCB90049B1E5 /* 极联SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "极联SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		586734A72446BCB90049B1E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		586734A82446BCB90049B1E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,12 +105,47 @@
 		586734CA2446BCBC0049B1E5 /* TopGLSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopGLSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		586734CE2446BCBC0049B1E5 /* TopGLSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopGLSDKDemoUITests.m; sourceTree = "<group>"; };
 		586734D02446BCBC0049B1E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		586735092446BD8A0049B1E5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		588C6D2D244D31780073C046 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		588C6D31244D32980073C046 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		588C6D33244D34500073C046 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		588C6D34244D34500073C046 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		588C6D36244D35250073C046 /* TopGLSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopGLSDKDemo.entitlements; sourceTree = "<group>"; };
+		58D12AD6248A3675002777AD /* TopTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTestVC.h; sourceTree = "<group>"; };
+		58D12AD7248A3675002777AD /* TopMainDeviceListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMainDeviceListVC.m; sourceTree = "<group>"; };
+		58D12AD9248A3675002777AD /* TopMainDeviceInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMainDeviceInfoVC.m; sourceTree = "<group>"; };
+		58D12ADA248A3675002777AD /* TopCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCodeVC.h; sourceTree = "<group>"; };
+		58D12ADB248A3675002777AD /* TopSubDeviceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSubDeviceVC.h; sourceTree = "<group>"; };
+		58D12ADC248A3675002777AD /* TopSelectSubDeviceActionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSelectSubDeviceActionVC.m; sourceTree = "<group>"; };
+		58D12ADD248A3675002777AD /* TopAddDeviceTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAddDeviceTypeVC.h; sourceTree = "<group>"; };
+		58D12ADE248A3675002777AD /* TopCtrDBRCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCtrDBRCVC.m; sourceTree = "<group>"; };
+		58D12ADF248A3675002777AD /* TopDBRCBrandListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDBRCBrandListVC.h; sourceTree = "<group>"; };
+		58D12AE0248A3675002777AD /* TopTimerListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTimerListVC.m; sourceTree = "<group>"; };
+		58D12AE1248A3675002777AD /* TopDBRCBrandFileIdListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDBRCBrandFileIdListVC.h; sourceTree = "<group>"; };
+		58D12AE2248A3675002777AD /* TopTimeDetialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTimeDetialVC.m; sourceTree = "<group>"; };
+		58D12AE3248A3675002777AD /* TopCustomDevKeyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCustomDevKeyListVC.h; sourceTree = "<group>"; };
+		58D12AE4248A3675002777AD /* TopCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCodeVC.m; sourceTree = "<group>"; };
+		58D12AE5248A3675002777AD /* TopMainDeviceInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMainDeviceInfoVC.h; sourceTree = "<group>"; };
+		58D12AE6248A3675002777AD /* TopCtrDBRCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCtrDBRCVC.h; sourceTree = "<group>"; };
+		58D12AE7248A3675002777AD /* TopAddDeviceTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAddDeviceTypeVC.m; sourceTree = "<group>"; };
+		58D12AE8248A3675002777AD /* TopSelectSubDeviceActionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSelectSubDeviceActionVC.h; sourceTree = "<group>"; };
+		58D12AE9248A3675002777AD /* TopSubDeviceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSubDeviceVC.m; sourceTree = "<group>"; };
+		58D12AEA248A3675002777AD /* TopTimeDetialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTimeDetialVC.h; sourceTree = "<group>"; };
+		58D12AEB248A3675002777AD /* TopDBRCBrandFileIdListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDBRCBrandFileIdListVC.m; sourceTree = "<group>"; };
+		58D12AEC248A3675002777AD /* TopTimerListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTimerListVC.h; sourceTree = "<group>"; };
+		58D12AED248A3675002777AD /* TopDBRCBrandListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDBRCBrandListVC.m; sourceTree = "<group>"; };
+		58D12AEE248A3675002777AD /* TopCustomDevKeyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCustomDevKeyListVC.m; sourceTree = "<group>"; };
+		58D12AEF248A3676002777AD /* TopSetTimeZoneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSetTimeZoneVC.h; sourceTree = "<group>"; };
+		58D12AF0248A3676002777AD /* TopMainDeviceListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMainDeviceListVC.h; sourceTree = "<group>"; };
+		58D12AF2248A3676002777AD /* TopDisinfectionLampTimerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDisinfectionLampTimerVC.h; sourceTree = "<group>"; };
+		58D12AF3248A3676002777AD /* TopDisinfectionLampRecordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDisinfectionLampRecordVC.h; sourceTree = "<group>"; };
+		58D12AF4248A3676002777AD /* TopDisinfectionLampMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDisinfectionLampMainVC.h; sourceTree = "<group>"; };
+		58D12AF5248A3676002777AD /* TopDisinfectionLampTimerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDisinfectionLampTimerVC.m; sourceTree = "<group>"; };
+		58D12AF6248A3676002777AD /* TopDisinfectionLampMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDisinfectionLampMainVC.m; sourceTree = "<group>"; };
+		58D12AF7248A3676002777AD /* TopDisinfectionLampRecordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDisinfectionLampRecordVC.m; sourceTree = "<group>"; };
+		58D12AF8248A3676002777AD /* TopSetTimeZoneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSetTimeZoneVC.m; sourceTree = "<group>"; };
+		58D12AF9248A3677002777AD /* TopTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTestVC.m; sourceTree = "<group>"; };
+		58D13500248A369B002777AD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		58D13502248A36CA002777AD /* GeeklinkSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeeklinkSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D13504248A36DB002777AD /* GeeklinkSDK.framework in Frameworks */,
 				588C6D2E244D31780073C046 /* CoreLocation.framework in Frameworks */,
-				585D60542452C72E00A0FB22 /* GeeklinkSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,39 +222,19 @@
 				586734A82446BCB90049B1E5 /* AppDelegate.m */,
 				588C6D34244D34500073C046 /* SceneDelegate.h */,
 				588C6D33244D34500073C046 /* SceneDelegate.m */,
-				585D601E2452C5D200A0FB22 /* TopAddDeviceTypeVC.h */,
-				585D60242452C5D300A0FB22 /* TopAddDeviceTypeVC.m */,
-				585D601D2452C5D100A0FB22 /* TopCodeVC.h */,
-				585D60122452C5D000A0FB22 /* TopCodeVC.m */,
-				585D60112452C5D000A0FB22 /* TopCtrDBRCVC.h */,
-				585D600C2452C5CF00A0FB22 /* TopCtrDBRCVC.m */,
-				585D600B2452C5CF00A0FB22 /* TopCustomDevKeyListVC.h */,
-				585D60102452C5CF00A0FB22 /* TopCustomDevKeyListVC.m */,
-				585D60212452C5D200A0FB22 /* TopDBRCBrandFileIdListVC.h */,
-				585D60132452C5D000A0FB22 /* TopDBRCBrandFileIdListVC.m */,
-				585D60182452C5D100A0FB22 /* TopDBRCBrandListVC.h */,
-				585D60202452C5D200A0FB22 /* TopDBRCBrandListVC.m */,
-				585D60222452C5D200A0FB22 /* TopMainDeviceInfoVC.h */,
-				585D60162452C5D000A0FB22 /* TopMainDeviceInfoVC.m */,
-				585D601C2452C5D100A0FB22 /* TopMainDeviceListVC.h */,
-				585D601A2452C5D100A0FB22 /* TopMainDeviceListVC.m */,
-				585D601F2452C5D200A0FB22 /* TopSelectSubDeviceActionVC.h */,
-				585D60152452C5D000A0FB22 /* TopSelectSubDeviceActionVC.m */,
-				585D60172452C5D000A0FB22 /* TopSetTimeZoneVC.h */,
-				585D60252452C5D300A0FB22 /* TopSetTimeZoneVC.m */,
-				585D600D2452C5CF00A0FB22 /* TopSubDeviceVC.h */,
-				585D600F2452C5CF00A0FB22 /* TopSubDeviceVC.m */,
-				585D60142452C5D000A0FB22 /* TopTestVC.h */,
-				585D600E2452C5CF00A0FB22 /* TopTestVC.m */,
-				585D60192452C5D100A0FB22 /* TopTimeDetialVC.h */,
-				585D60232452C5D200A0FB22 /* TopTimeDetialVC.m */,
-				585D60262452C5D300A0FB22 /* TopTimerListVC.h */,
-				585D601B2452C5D100A0FB22 /* TopTimerListVC.m */,
-				586735092446BD8A0049B1E5 /* Main.storyboard */,
+				58D12AF1248A3676002777AD /* 消毒灯 */,
+				58D12AD8248A3675002777AD /* 小pi */,
+				58D12AF0248A3676002777AD /* TopMainDeviceListVC.h */,
+				58D12AD7248A3675002777AD /* TopMainDeviceListVC.m */,
+				58D12AEF248A3676002777AD /* TopSetTimeZoneVC.h */,
+				58D12AF8248A3676002777AD /* TopSetTimeZoneVC.m */,
+				58D12AD6248A3675002777AD /* TopTestVC.h */,
+				58D12AF9248A3677002777AD /* TopTestVC.m */,
 				586734B32446BCBC0049B1E5 /* Assets.xcassets */,
 				586734B52446BCBC0049B1E5 /* LaunchScreen.storyboard */,
 				586734B82446BCBC0049B1E5 /* Info.plist */,
 				586734B92446BCBC0049B1E5 /* main.m */,
+				58D13500248A369B002777AD /* Main.storyboard */,
 				586734DC2446BCEA0049B1E5 /* Frameword */,
 				588C6D31244D32980073C046 /* InfoPlist.strings */,
 			);
@@ -273,7 +262,7 @@
 		586734DC2446BCEA0049B1E5 /* Frameword */ = {
 			isa = PBXGroup;
 			children = (
-				585D60522452C71500A0FB22 /* GeeklinkSDK.framework */,
+				58D13502248A36CA002777AD /* GeeklinkSDK.framework */,
 				585D60502452C6D900A0FB22 /* Timezone.strings */,
 				585D60492452C68000A0FB22 /* Localizable.strings */,
 			);
@@ -286,6 +275,48 @@
 				588C6D2D244D31780073C046 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58D12AD8248A3675002777AD /* 小pi */ = {
+			isa = PBXGroup;
+			children = (
+				58D12AD9248A3675002777AD /* TopMainDeviceInfoVC.m */,
+				58D12ADA248A3675002777AD /* TopCodeVC.h */,
+				58D12ADB248A3675002777AD /* TopSubDeviceVC.h */,
+				58D12ADC248A3675002777AD /* TopSelectSubDeviceActionVC.m */,
+				58D12ADD248A3675002777AD /* TopAddDeviceTypeVC.h */,
+				58D12ADE248A3675002777AD /* TopCtrDBRCVC.m */,
+				58D12ADF248A3675002777AD /* TopDBRCBrandListVC.h */,
+				58D12AE0248A3675002777AD /* TopTimerListVC.m */,
+				58D12AE1248A3675002777AD /* TopDBRCBrandFileIdListVC.h */,
+				58D12AE2248A3675002777AD /* TopTimeDetialVC.m */,
+				58D12AE3248A3675002777AD /* TopCustomDevKeyListVC.h */,
+				58D12AE4248A3675002777AD /* TopCodeVC.m */,
+				58D12AE5248A3675002777AD /* TopMainDeviceInfoVC.h */,
+				58D12AE6248A3675002777AD /* TopCtrDBRCVC.h */,
+				58D12AE7248A3675002777AD /* TopAddDeviceTypeVC.m */,
+				58D12AE8248A3675002777AD /* TopSelectSubDeviceActionVC.h */,
+				58D12AE9248A3675002777AD /* TopSubDeviceVC.m */,
+				58D12AEA248A3675002777AD /* TopTimeDetialVC.h */,
+				58D12AEB248A3675002777AD /* TopDBRCBrandFileIdListVC.m */,
+				58D12AEC248A3675002777AD /* TopTimerListVC.h */,
+				58D12AED248A3675002777AD /* TopDBRCBrandListVC.m */,
+				58D12AEE248A3675002777AD /* TopCustomDevKeyListVC.m */,
+			);
+			path = "小pi";
+			sourceTree = "<group>";
+		};
+		58D12AF1248A3676002777AD /* 消毒灯 */ = {
+			isa = PBXGroup;
+			children = (
+				58D12AF2248A3676002777AD /* TopDisinfectionLampTimerVC.h */,
+				58D12AF3248A3676002777AD /* TopDisinfectionLampRecordVC.h */,
+				58D12AF4248A3676002777AD /* TopDisinfectionLampMainVC.h */,
+				58D12AF5248A3676002777AD /* TopDisinfectionLampTimerVC.m */,
+				58D12AF6248A3676002777AD /* TopDisinfectionLampMainVC.m */,
+				58D12AF7248A3676002777AD /* TopDisinfectionLampRecordVC.m */,
+			);
+			path = "消毒灯";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +406,9 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
+				th,
+				vi,
 			);
 			mainGroup = 5867349B2446BCB90049B1E5;
 			productRefGroup = 586734A52446BCB90049B1E5 /* Products */;
@@ -397,8 +431,8 @@
 				585D60442452C66200A0FB22 /* SVProgressHUD.bundle in Resources */,
 				586734B72446BCBC0049B1E5 /* LaunchScreen.storyboard in Resources */,
 				588C6D32244D32980073C046 /* InfoPlist.strings in Resources */,
-				5867350A2446BD8A0049B1E5 /* Main.storyboard in Resources */,
 				586734B42446BCBC0049B1E5 /* Assets.xcassets in Resources */,
+				58D13501248A369B002777AD /* Main.storyboard in Resources */,
 				585D604E2452C6D900A0FB22 /* Timezone.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,27 +458,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585D602C2452C5D300A0FB22 /* TopDBRCBrandFileIdListVC.m in Sources */,
-				585D60302452C5D300A0FB22 /* TopTimerListVC.m in Sources */,
-				585D602F2452C5D300A0FB22 /* TopMainDeviceListVC.m in Sources */,
-				585D602A2452C5D300A0FB22 /* TopCustomDevKeyListVC.m in Sources */,
 				586734A92446BCB90049B1E5 /* AppDelegate.m in Sources */,
-				585D60272452C5D300A0FB22 /* TopCtrDBRCVC.m in Sources */,
-				585D60332452C5D300A0FB22 /* TopAddDeviceTypeVC.m in Sources */,
+				58D13084248A3687002777AD /* TopDisinfectionLampMainVC.m in Sources */,
+				58D13083248A3687002777AD /* TopDisinfectionLampTimerVC.m in Sources */,
+				58D1307F248A3687002777AD /* TopSubDeviceVC.m in Sources */,
+				58D1307A248A3687002777AD /* TopCtrDBRCVC.m in Sources */,
 				585D60462452C66200A0FB22 /* SVRadialGradientLayer.m in Sources */,
 				585D60432452C66200A0FB22 /* SVProgressHUD.m in Sources */,
-				585D60282452C5D300A0FB22 /* TopTestVC.m in Sources */,
-				585D60312452C5D300A0FB22 /* TopDBRCBrandListVC.m in Sources */,
-				585D60292452C5D300A0FB22 /* TopSubDeviceVC.m in Sources */,
+				58D1307B248A3687002777AD /* TopTimerListVC.m in Sources */,
 				585D60452452C66200A0FB22 /* SVProgressAnimatedView.m in Sources */,
-				585D60322452C5D300A0FB22 /* TopTimeDetialVC.m in Sources */,
+				58D13081248A3687002777AD /* TopDBRCBrandListVC.m in Sources */,
+				58D13087248A3687002777AD /* TopTestVC.m in Sources */,
 				585D60422452C66200A0FB22 /* SVIndefiniteAnimatedView.m in Sources */,
-				585D602B2452C5D300A0FB22 /* TopCodeVC.m in Sources */,
-				585D602D2452C5D300A0FB22 /* TopSelectSubDeviceActionVC.m in Sources */,
-				585D602E2452C5D300A0FB22 /* TopMainDeviceInfoVC.m in Sources */,
-				585D60342452C5D300A0FB22 /* TopSetTimeZoneVC.m in Sources */,
+				58D1307D248A3687002777AD /* TopCodeVC.m in Sources */,
+				58D13086248A3687002777AD /* TopSetTimeZoneVC.m in Sources */,
+				58D13077248A3687002777AD /* TopMainDeviceListVC.m in Sources */,
+				58D13080248A3687002777AD /* TopDBRCBrandFileIdListVC.m in Sources */,
+				58D13082248A3687002777AD /* TopCustomDevKeyListVC.m in Sources */,
+				58D1307E248A3687002777AD /* TopAddDeviceTypeVC.m in Sources */,
 				588C6D35244D34500073C046 /* SceneDelegate.m in Sources */,
+				58D13079248A3687002777AD /* TopSelectSubDeviceActionVC.m in Sources */,
+				58D1307C248A3687002777AD /* TopTimeDetialVC.m in Sources */,
 				586734BA2446BCBC0049B1E5 /* main.m in Sources */,
+				58D13085248A3687002777AD /* TopDisinfectionLampRecordVC.m in Sources */,
+				58D13078248A3687002777AD /* TopMainDeviceInfoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

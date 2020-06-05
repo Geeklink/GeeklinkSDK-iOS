@@ -11,17 +11,20 @@
 //设备分类型，如果主类型是TopDeviceMainTypeDatabese才有效
 
 #import "GLCarrierType.h"
-
-#import "TopDeviceType.h"
+#import "GLDeviceMainType.h"
+#import "GLDatabaseDevType.h"
 #import "TopACStateInfo.h"
 //码库机顶盒按键类型
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TopSubDevInfo : NSObject
 /**mainType Device's main type (主类型)*/
-@property (nonatomic , assign) TopDeviceMainType mainType;
+@property (nonatomic , assign) GLDeviceMainType mainType;
 /** If is database device  (码库设备分类型,非码库设备不用管，马库设备的key在TopDBTCKeyType)*/
-@property (nonatomic , assign) TopDataBaseDeviceType databaseType;
+@property (nonatomic , assign) GLDatabaseDevType databaseDevType;
+
+/**设备分类型*/
+@property (nonatomic , assign) NSInteger subType;
 
 /**Device' s subId  子设备的Id*/
 @property (nonatomic , assign) NSInteger subId;

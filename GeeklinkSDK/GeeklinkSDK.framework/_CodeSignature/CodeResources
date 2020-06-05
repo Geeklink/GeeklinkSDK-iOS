@@ -12,13 +12,37 @@
 		<data>
 		BfYrT7okGk7UI2AagON2WEhR4MA=
 		</data>
+		<key>Headers/GLActionType.h</key>
+		<data>
+		Tn+HpDmEf4pG6BMY3ZP4AR0XyTo=
+		</data>
 		<key>Headers/GLCarrierType.h</key>
 		<data>
 		7YGrtqPfoO9ZrhguxZDxLuklPB4=
 		</data>
+		<key>Headers/GLDatabaseDevType.h</key>
+		<data>
+		lrEF0evggVBkNxFN7LJIRX6Z5ZY=
+		</data>
 		<key>Headers/GLDevConnectState.h</key>
 		<data>
 		tlqHaLqVGgqGq24RrbtBJuyaTyY=
+		</data>
+		<key>Headers/GLDeviceMainType.h</key>
+		<data>
+		3fB+J/3orxaPkHUy3Ip4/WqOWW4=
+		</data>
+		<key>Headers/GLDisinfectionOperationType.h</key>
+		<data>
+		N5wfkm3xgRkp76lg6uK2bakp9F4=
+		</data>
+		<key>Headers/GLDisinfectionRecordType.h</key>
+		<data>
+		fEWUqowDflLaRhLBflDUY20m9Ws=
+		</data>
+		<key>Headers/GLGeeklinkDevType.h</key>
+		<data>
+		nTXTFvLgK7CqN3rEDtc4TJ3u7d8=
 		</data>
 		<key>Headers/GLKeyStudyType.h</key>
 		<data>
@@ -42,7 +66,7 @@
 		</data>
 		<key>Headers/SDK.h</key>
 		<data>
-		OzUBXg6p50+gp9bC/G+y+dRJiP8=
+		z6Kujdov8e7x/UlpAXFQ0T740VI=
 		</data>
 		<key>Headers/TopACStateInfo.h</key>
 		<data>
@@ -51,10 +75,6 @@
 		<key>Headers/TopActionInfo.h</key>
 		<data>
 		qgiLB0ZFX0OwC1v9JYrdt5XDgRw=
-		</data>
-		<key>Headers/TopConfigerDevResult.h</key>
-		<data>
-		e7xetBw8xvaVBvdnuc3/MRySIBc=
 		</data>
 		<key>Headers/TopDBRCBrand.h</key>
 		<data>
@@ -76,29 +96,49 @@
 		<data>
 		UdUfgWQa/XIPu5heSf6kEKJZ0KU=
 		</data>
-		<key>Headers/TopDeviceType.h</key>
-		<data>
-		vhJiyD6Hcr0MeJKWvemlX+vaoMI=
-		</data>
 		<key>Headers/TopGLAPIManager.h</key>
 		<data>
-		8tghzS5l2BDdvrrxoBPrkq/Tb1U=
+		jTsjGey/maMg0+9jDIoYRgAEsYM=
+		</data>
+		<key>Headers/TopGLAPIResult.h</key>
+		<data>
+		d+DytrLZHNubD9lF0O0b5tyjHe0=
+		</data>
+		<key>Headers/TopGLDisinfectionLampAPIManager.h</key>
+		<data>
+		Ayv3BfjyGvhfzYituv/kke5p/U0=
+		</data>
+		<key>Headers/TopGLDisinfectionLampRecord.h</key>
+		<data>
+		6qOWboJwzA5XGK+p0daRaxIUpto=
+		</data>
+		<key>Headers/TopGLDisinfectionLampResultInfo.h</key>
+		<data>
+		e/OeAJsvXrid3N/dPurqBmCVy48=
+		</data>
+		<key>Headers/TopGLDisinfectionTimerInfo.h</key>
+		<data>
+		jP4lfRsSEWHzZ47beBPiU5TCuyE=
+		</data>
+		<key>Headers/TopGLSmartPiAPIManager.h</key>
+		<data>
+		f080iyXzPbtOWCNQUbDUShnkX08=
+		</data>
+		<key>Headers/TopGLSmartPiResultInfo.h</key>
+		<data>
+		iRtx3J2sK9QOE/DlFgJn8f+G4Cc=
 		</data>
 		<key>Headers/TopMainDevStateInfo.h</key>
 		<data>
-		oCiKmD3ghdpyNj9kFdiYPb7n9XI=
+		KkG3z5mKQipiB+0RSSO0sWiSFMo=
 		</data>
 		<key>Headers/TopMainDeviceInfo.h</key>
 		<data>
-		eS7rKmMLgu71k/ZYO+q5EgMfGso=
-		</data>
-		<key>Headers/TopResultInfo.h</key>
-		<data>
-		m/5UgnHLi4/ZHQVjDYy1hEeo1cE=
+		xy7A/eD1KtHNvSlqedtyYOEjZUw=
 		</data>
 		<key>Headers/TopSubDevInfo.h</key>
 		<data>
-		/NwpCgqAAXWHOjJUq/wl8RGOxWU=
+		/v4EE1xBl7qUPTBveRqBIgHtTN0=
 		</data>
 		<key>Headers/TopThkAckInfo.h</key>
 		<data>
@@ -106,15 +146,15 @@
 		</data>
 		<key>Headers/TopTimeInfo.h</key>
 		<data>
-		XjlqKfFuKQO9MYs+Q5oLrJVU/XY=
+		xKyqTBhS3G2y3ViKvHraet8QUuo=
 		</data>
 		<key>Headers/TopTimerSimpleInfo.h</key>
 		<data>
-		corPLU7cCFZlmpmnJCednn83FLw=
+		GY5AnF9F/Blt5ItSDjPJLCOVzqc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OhJVjL3tu3ov0ICzTghE6oFe/Qw=
+		Cjh1CMfHfJO8USa+IKmhZXzPSpU=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -134,11 +174,11 @@
 		</data>
 		<key>libGeeklinkCpp.a</key>
 		<data>
-		0QQoAMkgP0x/V4VDHnfY4DbRxZE=
+		2PVrP0ZFgeBJvz0OzxVd/GtZ4As=
 		</data>
 		<key>libGeeklinkObjc.a</key>
 		<data>
-		7DrL6j5qgRhmG3NI+FaO0SW5C9U=
+		6+PL1+wWU+13XFKpCrnmCk91Z0g=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -157,6 +197,13 @@
 			OHTNJQM3mXztPgaPbJqgfj1bwvwWF8SyotCMZjxfKjY=
 			</data>
 		</dict>
+		<key>Headers/GLActionType.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4CcmbqptAku4Wh0jGR/XwQDPgpPlPErsSC1si8xbvjY=
+			</data>
+		</dict>
 		<key>Headers/GLCarrierType.h</key>
 		<dict>
 			<key>hash2</key>
@@ -164,11 +211,46 @@
 			8lVKHK4y1JX2RQD5pM0qlRW6ZDMn4Yd+80E9mspAe5w=
 			</data>
 		</dict>
+		<key>Headers/GLDatabaseDevType.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+DwSQ9Q4TGxR3PFck3ivdC5u8pxlQ2ba8yoVZvxmXBQ=
+			</data>
+		</dict>
 		<key>Headers/GLDevConnectState.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			I3+T45d3y13T9OXm39gi9FnlEcpz42ytOWnFMRDux8w=
+			</data>
+		</dict>
+		<key>Headers/GLDeviceMainType.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xyZgb6vcMh4YWhQwhvCmWpeCA3b4plChHwUZhPdj548=
+			</data>
+		</dict>
+		<key>Headers/GLDisinfectionOperationType.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iO2jcuKqiNLnAZ/QH/FYVN1xVcwRsrc3GrLZWdgqizk=
+			</data>
+		</dict>
+		<key>Headers/GLDisinfectionRecordType.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VttrRG+zuRSF+gUA9WRFEJdxz5qpCyP5lCCkGzT3Bs8=
+			</data>
+		</dict>
+		<key>Headers/GLGeeklinkDevType.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PjPTIGgV5IUbI3DR7w+q8uQ588GT3fwSgo1szxli0j4=
 			</data>
 		</dict>
 		<key>Headers/GLKeyStudyType.h</key>
@@ -210,7 +292,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G7nP3SG0NNeY0z6m32or3XQzYEZpJoYrCarVvQ2XN0Y=
+			UdbVNMG/9AQAmS/O1sbwUw1o9A5gKG+xOr7fw/SXg5s=
 			</data>
 		</dict>
 		<key>Headers/TopACStateInfo.h</key>
@@ -225,13 +307,6 @@
 			<key>hash2</key>
 			<data>
 			MIjP2yRPRM7rhz1FoPBfw+0z4waTTW4g0DLIePAOZXs=
-			</data>
-		</dict>
-		<key>Headers/TopConfigerDevResult.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Fk03V0xYy0TLFOyIABLzvo9WNuM3zuj+9c4NcRdcn94=
 			</data>
 		</dict>
 		<key>Headers/TopDBRCBrand.h</key>
@@ -269,46 +344,81 @@
 			6tqWZa8hCvs3QSB+N0ianDUuADJqNoopsN8rvP4E87Y=
 			</data>
 		</dict>
-		<key>Headers/TopDeviceType.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			L/TQPyAiYqF+sFssc1h7pP3RfYRa+c7sjjrZRVyxKDU=
-			</data>
-		</dict>
 		<key>Headers/TopGLAPIManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uMc72LTLkS0sqUCeRUEZnn+HvesfsLl10vL1U02VH64=
+			d41XFjEh4oRzOWzCTj3KCkb0dcIDWDKfeou7Re1rjwI=
+			</data>
+		</dict>
+		<key>Headers/TopGLAPIResult.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			J4HKFcOoKpKZBssFlSKuxsMgZUMeqYaesMH+5iaocWQ=
+			</data>
+		</dict>
+		<key>Headers/TopGLDisinfectionLampAPIManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			athkq6wdChvc5r3yj+wHHWIP+2u48/5tTgoJpoS85NM=
+			</data>
+		</dict>
+		<key>Headers/TopGLDisinfectionLampRecord.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OWukCDU+bYOhchevWpaguKYuDR5ajYl/6kgwWlfpFJk=
+			</data>
+		</dict>
+		<key>Headers/TopGLDisinfectionLampResultInfo.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			02K+JdrgH0z88I3NXIRKoe8xLoUEfHR5qRJs7ADpyUw=
+			</data>
+		</dict>
+		<key>Headers/TopGLDisinfectionTimerInfo.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FSHzYZu3iyrNQDD+zklTMx3drkO29PGXs2mN6XsJH5Y=
+			</data>
+		</dict>
+		<key>Headers/TopGLSmartPiAPIManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			T89SVbzhlnhMNP7Kd4y/0zOF9Ern/GQLfN8FFyo8thI=
+			</data>
+		</dict>
+		<key>Headers/TopGLSmartPiResultInfo.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BXuJCt3IbrEVA6QTDmSymniTkLHKbAMx2pFjznuWt9s=
 			</data>
 		</dict>
 		<key>Headers/TopMainDevStateInfo.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nT5zGqpMknBdyLoMn/WQzfu5KU2PHT24miI/HBfckX8=
+			/O/vAu0gjqYNRCOoljl6KcPShvvZfkKHjBQoADq6E4M=
 			</data>
 		</dict>
 		<key>Headers/TopMainDeviceInfo.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gR6Ux/xcp7qcm3g4l96uZWzKn3tJL1/uEiA20Wtym+c=
-			</data>
-		</dict>
-		<key>Headers/TopResultInfo.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z4Et694fErLjNlhrWsz6z+dZCvsVYLRPPdXTcQLmLiI=
+			K0pbxgUj0CPS/0Arg6OjBC+Ln19n8tiWlMWzj934868=
 			</data>
 		</dict>
 		<key>Headers/TopSubDevInfo.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cLqT/SkkRIiGec1PLBiMAwoAin9GzhT10XyMmHil0zE=
+			AwFU2Tu6lR/jaZ7FO5nSfJoAswaRfqEkvpBdvE4B7mA=
 			</data>
 		</dict>
 		<key>Headers/TopThkAckInfo.h</key>
@@ -322,14 +432,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0P/BeL6lL7rNJjUvLbL1ZmH7KLP98ko56Req73P2XwA=
+			hGCwuQx+Dtxvu+v67oo86fMd7f1FwBaJ6/zPNCz1TLY=
 			</data>
 		</dict>
 		<key>Headers/TopTimerSimpleInfo.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cg6QVW8F92f2ivFHH8z+LcrepQCc48aIk8YzNdGJxdA=
+			xx1YKL+DJfvLTqaQa2HEy5wlFdKJvnovWEvl7LIreAU=
 			</data>
 		</dict>
 		<key>LICENSE</key>
@@ -364,14 +474,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yq6a31Aj/Ui/pk3nHValVZOzD3mF3WijOfmZPO39u3o=
+			PnvZDgEetQVZLNi++TLccISS9dWH5UHYHokDBfeWVZ0=
 			</data>
 		</dict>
 		<key>libGeeklinkObjc.a</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wKBP/JFd7zwRhOiPpOWPebgfkRLdAB550pCXPFG/+YE=
+			L+8QrpJLXsUphp/9mN4lizZVELzHia1HdhvHc4L5F3o=
 			</data>
 		</dict>
 	</dict>

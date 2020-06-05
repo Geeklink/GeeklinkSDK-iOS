@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
    #名称
     spec.name         = "GeeklinkSDK"
     #版本号
-    spec.version      = "1.0.0"
+    spec.version      = "1.0.1"
     #许可证
     spec.license      = { :type => 'MIT' }
     #项目主页地址
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
     #项目的地址
     spec.source       = { :git => "https://github.com/Geeklink/GeeklinkSDK-iOS.git", :tag =>  spec.version}
  
-    #支持最小系统版本
+    #支持最小系统版本 
     spec.platform     = :ios, "10.0"
 
     #需要包含的源文件

@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *tiplabel2;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *navRightBtn;
 @property (weak, nonatomic) IBOutlet UIButton *otherWifiBtn;
 
 
@@ -33,7 +34,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *guideLabel;//提示
 @property (weak, nonatomic) IBOutlet UIButton *configureButton;//配置按钮
 @property (nonatomic, strong) CLLocationManager         *locationManager;       // 定位获取Wi-Fi
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *deviceListItem;
 
 @property (copy, nonatomic) NSString * deviceSaveKey;//本地设备保存的key
 
@@ -47,47 +47,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.configureButton setTitle:NSLocalizedString(@"Start configuration",@"") forState:UIControlStateNormal];
+    self.navRightBtn.title = NSLocalizedString(@"Device List", @"");
     self.titleLabel.text = NSLocalizedString(@"Please connect to the Wi-Fi of the device ready to configure", @"");
     self.tipLabel1.text = NSLocalizedString(@"If the router supports dual-band Wi-Fi, please connect to 2.4G Wi-Fi, do not connect to 5G Wi-Fi, and do not turn on the router dual-band integration function.", @"");
     self.tiplabel2.text = NSLocalizedString(@"The device needs to be connected to the same LAN as the mobile phone. Please do not use the router guest network or turn on the router AP isolation function.", @"");
     [self.otherWifiBtn setTitle:NSLocalizedString(@"Switch Other Wifi", @"") forState:UIControlStateNormal];
-    [self.configureButton setTitle:NSLocalizedString(@"Configure", @"") forState:UIControlStateNormal];
-    self.textField.placeholder = NSLocalizedString(@"Please input pass word", @"");
-     self.guideLabel.text = NSLocalizedString(@"Clicked To Configure", @"");
     
     self.titleLabel.adjustsFontSizeToFitWidth = true;
     self.deviceSaveKey = @"deviceSaveKey";
-    self.deviceListItem.title = NSLocalizedString(@"Device List", @"");
+    self.textField.placeholder = NSLocalizedString(@"Please input the password", @"");
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey: self.deviceSaveKey] != nil) {
-        NSArray * deviceDictList = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceSaveKey];
-        
-        for (NSDictionary * deviceDict in deviceDictList) {
-            TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
-            mainDeviceInfo.md5 = deviceDict[@"md5"];
-            mainDeviceInfo.token = deviceDict[@"token"];
-            NSNumber * mainTypeNum = deviceDict[@"mainType"];
-            mainDeviceInfo.mainType = mainTypeNum.integerValue;
-            NSNumber * subTypeNum = deviceDict[@"subType"];
-            mainDeviceInfo.subType = subTypeNum.integerValue;
-            [self.mainDeviceList addObject:mainDeviceInfo];
-            
-        }
-    }
+    self.guideLabel.text = NSLocalizedString(@"Please click to start the network", @"");
     
-    
-    //
-    //   TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
-    //    mainDeviceInfo.md5 = @"b97c1b579a595eeb4b5fd36e28b771a0".lowercaseString;
-    //    mainDeviceInfo.token = @"2ACE5E33";
-    //
-    //
-    //    mainDeviceInfo.mainType = TopNetworkDevice;
-    //    mainDeviceInfo.subType = TopNetworkDeviceTypeSmartpi;
-    //    [self.mainDeviceList addObject:mainDeviceInfo];
-    
-    [[TopGLAPIManager shareManager] linKAllMainDevice:self.mainDeviceList];
+ 
+ 
     
     
     BOOL enable = [CLLocationManager locationServicesEnabled];
@@ -132,9 +106,19 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+      [self.mainDeviceList removeAllObjects];
     
+//    
+//       TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
+//        mainDeviceInfo.md5 = @"3509e0c15a6630dd268aa73778bf25ff".lowercaseString;
+//        mainDeviceInfo.token = @"69817159";
+//    
+//    
+//        mainDeviceInfo.mainType = GLDeviceMainTypeGeeklinkDev;
+//        mainDeviceInfo.subType = GLDeviceMainTypeGeeklinkDevTypeDisinfectionLamp;
+//        [self.mainDeviceList addObject:mainDeviceInfo];
     
-    //读取当前Wi-Fi名字
+    //Get Current wifi SSID （读取当前Wi-Fi名字）
     apSsid = @"";
     apBssid = @"";
     for (NSString *cfa in CFBridgingRelease(CNCopySupportedInterfaces())) {
@@ -145,6 +129,25 @@
             break;
         }
     }
+  
+    if ([[NSUserDefaults standardUserDefaults] objectForKey: self.deviceSaveKey] != nil) {
+        NSArray * deviceDictList = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceSaveKey];
+        
+        for (NSDictionary * deviceDict in deviceDictList) {
+            TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
+            mainDeviceInfo.md5 = deviceDict[@"md5"];
+            mainDeviceInfo.token = deviceDict[@"token"];
+            NSNumber * mainTypeNum = deviceDict[@"mainType"];
+            mainDeviceInfo.mainType = mainTypeNum.integerValue;
+            NSNumber * subTypeNum = deviceDict[@"geeklinkDevType"];
+            mainDeviceInfo.geeklinkDevType = subTypeNum.integerValue;
+            [self.mainDeviceList addObject:mainDeviceInfo];
+            
+        }
+    }
+    
+    
+    [[TopGLAPIManager shareManager] linKAllMainDevice:self.mainDeviceList];
     
     
     //更新界面显示
@@ -158,9 +161,14 @@
     
 }
 - (void)gotoTopMainDeviceListVC {
+   
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     TopMainDeviceListVC *vc = [storyboard instantiateViewControllerWithIdentifier:@"TopMainDeviceListVC"];
-    vc.mainDeviceList = self.mainDeviceList;
+    NSMutableArray * mainDeviceList = [NSMutableArray array];
+    for (TopMainDeviceInfo * mainDevice in self.mainDeviceList) {
+        [mainDeviceList addObject:mainDevice];
+    }
+    vc.mainDeviceList = mainDeviceList;
     [self showViewController:vc sender:nil];
 }
 - (IBAction)clickDeviceListBtn:(id)sender {
@@ -233,11 +241,11 @@
 //点击配置
 - (IBAction)onConfigureStart:(id)sender {
     if (isConfigureRunning) {
-        //停止配置
+        //Stop configuration (停止配置)
         [self onConfigureStop];
         
     } else {
-        //检查配置信息
+        //Check configuration information (检查配置信息)
         if ([apSsid isEqualToString:@""]) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Not Connect Wi-Fi", @"") message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
@@ -253,11 +261,11 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"5g Wi-Fi is not supported", @"") message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil]];
             [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Switch Wifi", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                //切换Wi-Fi
+                //Switch Wifi (切换Wi-Fi)
                 [self onChangeWifi:[UIButton new]];
             }]];
             [alert addAction:[UIAlertAction actionWithTitle:@"Continue" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                //开始配网
+                //Start to config network  (开始配网)
                 [self onConfigureStart];
             }]];
             [self presentViewController:alert animated:YES completion:nil];
@@ -283,15 +291,15 @@
     
     isConfigureRunning = YES;
     
-    //更新界面显示
+
     self.guideLabel.text = NSLocalizedString(@"Configuring", @"");
     [self.configureButton setTitle:NSLocalizedString(@"Stop configuration",@"") forState:UIControlStateNormal];
-    //获取Wi-Fi密码，在非主线程时获取会报异常
+ 
     NSString *apPwd = self.textField.text;
-    [TopGLAPIManager.shareManager configerWifiWithApBssid:apBssid andApSsid:apSsid andPassword:apPwd configerResult:^(TopConfigerDevResult * _Nonnull configerDevResult) {
+    [TopGLAPIManager.shareManager configerWifiWithApBssid:apBssid andApSsid:apSsid andPassword:apPwd configerResult:^(TopGLAPIResult * _Nonnull configerDevResult) {
         NSMutableArray * mutDeviceDictList = [NSMutableArray array];
         if (configerDevResult.state == GLStateTypeOk) {
-            // 我这里只是暂时将数据保存到本地
+            //I just temporarily save the data locally (我这里只是暂时将数据保存到本地)
             [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Success", @"")];
             if ([[NSUserDefaults standardUserDefaults] objectForKey: self.deviceSaveKey] != nil) {
                 NSArray * deviceDictList = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceSaveKey];
@@ -311,14 +319,14 @@
             mutDeviceDict[@"token"] = configerDevResult.token;
             
             mutDeviceDict[@"mainType"] = [NSNumber numberWithInteger:configerDevResult.mainType];
-            mutDeviceDict[@"subType"] = [NSNumber numberWithInteger:configerDevResult.subType];;
+            mutDeviceDict[@"geeklinkDevType"] = [NSNumber numberWithInteger:configerDevResult.geeklinkDevType];;
             [mutDeviceDictList addObject:mutDeviceDict];
             
             TopMainDeviceInfo * mainDeviceInfo = [[TopMainDeviceInfo alloc] init];
             mainDeviceInfo.md5 = configerDevResult.md5;
             mainDeviceInfo.token = configerDevResult.token;
             mainDeviceInfo.mainType = configerDevResult.mainType;
-            mainDeviceInfo.subType = configerDevResult.subType;
+            mainDeviceInfo.geeklinkDevType = configerDevResult.geeklinkDevType;
             [self.mainDeviceList addObject:mainDeviceInfo];
             
             [[NSUserDefaults standardUserDefaults] setObject:mutDeviceDictList forKey:self.deviceSaveKey];
@@ -347,7 +355,7 @@
 - (void)onConfigureStop {
     isConfigureRunning = NO;
     self.guideLabel.text = NSLocalizedString(@"Clicked To Configure", @"");
-    [self.configureButton setTitle:NSLocalizedString(@"Configure", @"") forState:UIControlStateNormal];
+    [self.configureButton setTitle:NSLocalizedString(@"Start configuration",@"") forState:UIControlStateNormal];
     [[TopGLAPIManager shareManager] stopConfigureWifi];
     
 }
