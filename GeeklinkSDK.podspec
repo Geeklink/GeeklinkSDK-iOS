@@ -9,13 +9,13 @@ Pod::Spec.new do |spec|
     #许可证
     spec.license      = { :type => 'MIT' }
     #项目主页地址
-    spec.homepage     = "https://github.com/GeeklinkHome/GeeklinkSDK"
+    spec.homepage     = "https://github.com/Geeklink/GeeklinkSDK-iOS"
     #作者
     spec.author       = { "GeeklinkSmart" => "674250189@qq.com" }
     #简介
     spec.summary      = "A delightful iOS framework."
     #项目的地址
-    spec.source       = { :git => "https://github.com/GeeklinkHome/GeeklinkSDK.git", :tag =>  spec.version}
+    spec.source       = { :git => "https://github.com/Geeklink/GeeklinkSDK-iOS.git", :tag =>  spec.version}
  
     #支持最小系统版本
     spec.platform     = :ios, "10.0"
